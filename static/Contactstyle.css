@@ -1,0 +1,476 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+
+*{
+     
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     font-family: 'Poppins' , sans-serif;
+
+}
+
+
+/* Code Goes Here */
+
+/* Section 1 - header  */
+
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Farm Ez Logo  */
+
+.logo
+{
+  
+  margin-left: 1rem;
+  color: whitesmoke;
+  font-size: 3rem;
+  font-weight: bolder;
+  border-radius: 1rem;
+  cursor: pointer;
+
+}
+
+.logo:hover{
+   
+   color:#347464;
+   transition: 0.5s;
+
+}
+
+
+
+/* Navigation bar */
+
+.navbar{ 
+     
+     height:auto;
+     width: 100%;
+     padding : 0 0 4.5rem;
+     
+     position: sticky;
+     top: 0;
+     z-index: 999;
+    
+}
+  
+
+.navbar-colored {
+
+  background-color: #3d7b67;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.5s ease-in-out;
+
+}
+
+
+.nav-item{
+ 
+      font-family: 'Poppins' , sans-serif;
+      font-size: 1rem;
+      padding: 1rem;
+      font-weight: bolder;
+
+     
+}  
+
+/* Navbar Ke text ke liye hai  */
+
+
+.navbar-nav .nav-link {
+       color: #ffffff; /* or use the shorthand notation color: white; */
+      
+}
+
+
+.navbar-nav .nav-link:hover{
+   
+  transition: 0.5s;
+  color: #347464;
+ 
+
+}
+
+.navbar-toggler{
+
+     color:#FFFFFF;
+
+}
+
+
+/* Section 2 :: info And Form */
+
+
+.Contact{
+
+   margin: 7rem 0;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row;
+   align-items: center;
+
+}
+
+/* Part 1 */
+.contact-info{
+
+    text-align: left;
+    /* font-size: 25px; */
+    width: 40%;
+    margin-left: 5rem;
+    padding: 3rem;
+
+}
+
+
+.contact-info h2{
+
+  color: #347464;
+  font-weight: 900;
+
+}
+
+.contact-info h2:hover{
+
+  color: #31a789;
+
+}
+
+
+.content{
+
+    color: black;
+    width: 60%
+
+}
+
+.content h1{
+  
+   color: #347464;
+   font-size: 2rem;
+   font-weight: 900;
+   margin-bottom: 2rem;
+  
+}
+
+.content h1:hover{
+
+  color: #379d84;
+
+}
+
+
+.icon{
+    
+   color: #347464;
+   margin-top: 2rem;
+   padding-right: 1rem;
+
+}
+
+.icon:hover{
+
+    color: #379d84;
+
+}
+
+.Address h2{
+
+    font-size: 2rem;
+    font-weight: 2rem;
+
+}
+
+p { 
+
+  font-size: 1rem;
+  font-weight: 700;
+
+}
+
+
+
+/* Part 2 */
+.contact-detail{
+
+   width: 35%;
+   margin-right: 200px;
+   padding: 50px;
+   border-radius: 20px;
+   transition: 0.3s;
+   box-shadow: 0 0 10px 0.3px #347464;
+   background-color: #3d7b67;
+     
+}
+
+
+
+.contact-form h2:hover{
+   
+  color: #379d84;
+
+}
+
+.contact-form {
+  
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+
+}
+.inputbox {
+
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+
+.contact-form h2{
+   
+   font-size: 2rem;
+   font-weight: 900;
+   color:#3d7b67;
+
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ddd;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3d7b67;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #3d9a7c;
+}
+
+span {
+  
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 10px;
+
+  color: #3d7b67;
+
+
+}
+
+
+/*  Section :: Footer  */
+
+ 
+#footer{
+  
+  position: relative;
+  z-index: 2;
+
+  padding : 5%  10%;
+
+}
+
+.row{
+
+  
+   background-color: #357162;
+
+}
+
+
+/* Copyright logo  */
+
+
+.copyright-logo{
+
+
+       float:right;
+       margin-right: 5rem;
+
+       color: whitesmoke;
+       font-size: 3rem;
+       font-weight: bolder;
+       cursor: pointer;
+           
+
+}
+.copyright-logo:hover{
+
+      color: #449b85;
+
+}
+
+.Copyright-box{
+     
+    text-align: center;
+    font-weight: bolder;
+    padding   : 5%;
+
+}
+
+.Copyright-icon{
+     
+     color: whitesmoke;
+     margin-bottom: 4rem;
+     margin-left: 5.5rem;
+   
+
+}
+
+.Copyright-icon:hover{
+   
+     color: #28a788;
+     transition: 0.2s;
+ 
+}
+
+
+
+
+/* Social Handles */
+
+
+.Social-media{
+
+  text-align: center;
+  font-weight: bolder;
+  padding   : 5%;
+
+}
+
+.social-icon{  
+
+  color: whitesmoke;
+  margin-bottom: 1rem;
+  padding:10px;
+
+}
+
+
+.social-icon:hover{
+   
+    color: #28a788;
+    transition: 0.2s;
+ 
+}
+
+.Social-media p{
+        
+        color: whitesmoke;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+
+}
+
+.Social-media p:hover{
+
+    color: #28a788;
+    transition: 0.2s;
+
+}
+
+
+
+/* Get A Newsletter  */
+
+
+.Newsletter{
+    
+  text-align: center;
+  font-weight: bolder;
+
+}
+
+
+.Newsletter p{
+        
+  color: whitesmoke;
+  text-align: left;
+  font-size: 2rem;
+  margin-top: 3rem;
+
+}
+
+.Newsletter p:hover{
+
+   color: #28a788;
+   transition: 0.2s;
+
+}
+
+.Newsletter h6{
+    
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    
+}
+
+
+form{
+
+
+    text-align: left;
+    font-weight: 500;
+    width: fit-content;
+
+
+}
+
+form input{
+
+  border:0;
+  outline: none;
+  height: 70px;
+  width: 400px;
+  font-size: 16px;
+
+
+}
+
+
+form button{
+    
+    margin-top: 1rem;
+    border-radius: 1px;
+    border:none;
+    background: white;
+    height: 70px;
+    width: 200px;
+    cursor: pointer;
+
+}
+
+
+form button:hover{
+
+    background-color: #449b85;
+
+}
