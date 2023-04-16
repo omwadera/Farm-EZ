@@ -43,7 +43,7 @@ jsonschema==4.17.3
 jupyter-events==0.6.3
 jupyter-ydoc==0.2.2
 jupyterlab==3.6.1
-matplotlib==3.7.1
+matplotlib==3.4.3.
 matplotlib-inline==0.1.6
 numpy==1.24.2
 pandas==1.5.3
