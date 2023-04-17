@@ -41,15 +41,6 @@
 
 /* Section 1 - header  */
 
-/* Set overflow to hidden by default */
-body {
-  overflow: hidden;
-}
-
-/* Set overflow to auto when search button is clicked */
-body.search-btn-clicked {
-  overflow: auto;
-}
 
 
 header
@@ -627,24 +618,6 @@ input{
 
 </head>
 
-<script>
-
-          
-  // Get a reference to the search button
-  var searchButton = document.querySelector('.Searchbtn');
-
-  // Add a click event listener to the search button
-  searchButton.addEventListener('click', function() {
-    // Get a reference to the body element
-    var body = document.querySelector('body');
-
-    // Add a CSS class to the body element that sets overflow to auto
-    body.classList.add('search-btn-clicked');
-  });
-      
-
- </script>
-
 
 
 <body>
@@ -807,10 +780,6 @@ input{
         
       </div>
         
-
-
-    
-
       </div>
 
    </section>  
