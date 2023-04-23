@@ -44,7 +44,7 @@ def home():
 @app.route('/chart', methods=['POST'])
 def chart():
     
-    raw_data['DISTRICT_NAME'] = raw_data['DISTRICT_NAME'].str.replace(' ', '')
+    raw_data['DISTRICT_NAME'] = raw_data['DISTRICT_NAME'].str.replace(' ','')
     district = request.form['district']
     df = raw_data[raw_data['DISTRICT_NAME'] == district]
     
