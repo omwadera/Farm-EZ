@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<!-- Head Section -->
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>पंजीकरण पृष्ठ</title>
+
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+      <style>
+      /* Google Fonts */
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+
+      *{
+          
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          font-family: 'Poppins' , sans-serif;
+
+      }
+
+
+      /* Code Goes Here */
+
+      /* Section 1 - header  */
+
+      header
+      {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+
+      /* Farm Ez Logo  */
+
+      .logo
+      {
+        
+        margin-left: 1rem;
+        color: whitesmoke;
+        font-size: 3rem;
+        font-weight: bolder;
+        border-radius: 1rem;
+        cursor: pointer;
+
+      }
+
+      .logo:hover{
+        
+        color:#347464;
+        transition: 0.5s;
+
+      }
+
+
+
+      /* Navigation bar */
+
+      .navbar{ 
+          
+          height:auto;
+          width: 100%;
+          padding : 0 0 4.5rem;
+          
+          position: sticky;
+          top: 0;
+          z-index: 999;
+          
+      }
+        
+
+      .navbar-colored {
+
+        background-color: #3d7b67;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+        transition: background-color 0.5s ease-in-out;
+
+      }
+
+      .nav-item{
+      
+            font-family: 'Poppins' , sans-serif;
+            font-size: 1rem;
+            padding: 1rem;
+            font-weight: bolder;
+          
+      }  
+
+      /* Navbar Ke text ke liye hai  */
+
+
+      .navbar-nav .nav-link {
+            color: #ffffff; /* or use the shorthand notation color: white; */
+            
+      }
+
+
+      .navbar-nav .nav-link:hover{
+        
+        transition: 0.5s;
+        color: #347464;
+      
+
+      }
+
+      .navbar-toggler{
+
+          color:#FFFFFF;
+
+      }
+
+      /* Register button custom button*/
+
+      .custom-btn2{
+
+        background-color:#347464; /* white background */
+        color: #FFFFFF; /* green text color */
+
+        border: none;
+        border-radius: 4px;
+        
+        padding: 5px 10px;
+        
+        font-size: 1.5rem;
+        font-weight: 800;
+        
+        text-transform: uppercase;
+        cursor: pointer;
+
+        letter-spacing: 5px;
+        
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+
+      }
+
+      .custom-btn2:hover {
+
+        background-color: #548c7c; /* green background on hover */
+        color: #FFFFFF; /* white text color on hover */
+
+      }
+
+      .custom-btn2:active {
+
+        background-color: #548c7c; /* darker green background on active */
+        color: #FFFFFF; /* white text color on active */
+
+      }
+
+
+
+      /*---- Code For Navigation Bar Ends Here------*/
+
+
+
+      /*  Registration form */
+
+      #Register{
+          
+          position: relative;
+          z-index: 2;
+          padding : 5%  10%;
+          background-color: #659c85;
+
+      }
+
+      .Register-heading{
+        
+          text-align: center;
+          padding:  2rem 0;
+          font-size: 3rem;
+          font-weight: 800;
+          margin-bottom: 3rem;
+          margin-top: 2rem;
+          letter-spacing: 2px;
+          
+      }
+      
+      .Register-heading span{
+      
+          
+            background: #357162;
+            color: #ffffff;
+            display: inline-block;
+            padding: 0.5rem 3rem;
+            clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+        
+      }
+      
+      .Register-heading span:hover{
+      
+            background: #548c7c;
+            box-shadow: #111;
+        
+      }
+
+
+
+
+      /* Css For Registration Form !  */
+
+      form {
+        width: 50%;
+        margin: auto;
+        
+        color: black;
+        font-weight: 500;
+
+      }
+
+      /* Style the form inputs */
+      input[type=text], input[type=email], input[type=tel], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+      }
+
+
+      label[for="male"], label[for="female"], input[type="radio"] {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      #gender {
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+      }
+
+
+      /* Style the radio button labels */
+      .radio-label {
+        display: block;
+        margin-bottom: 12px;
+      }
+
+      /* Style the submit button */
+      input[type=submit] {
+        background-color: #548c7c;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+      }
+
+      input[type=submit]:hover {
+        background-color: #649484;
+      }
+
+      /* Style the reset button */
+      input[type=reset] {
+        background-color: #f3cc6c;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+        margin-right: 10px;
+      }
+
+      input[type=reset]:hover {
+        background-color: #dcc46c;
+      }
+
+      /* Style the form header */
+      .form-header {
+        text-align: center;
+        margin-bottom: 20px;     
+      }
+
+        /* Footer Section :: */
+
+        #footer{
+        
+        position: relative;
+        z-index: 2;
+
+        padding : 2%  8%;
+        background-color: whitesmoke;
+
+      }
+
+      .footer-logo{
+          
+        margin-top: 4rem;
+
+      }
+
+
+        /* Copyright logo  */
+
+
+        .copyright-logo{
+
+
+              float:right;
+              margin-right: 5rem;
+
+              color: #357162;
+              font-size: 3rem;
+              font-weight: bolder;
+              cursor: pointer;
+                  
+
+        }
+        .copyright-logo:hover{
+
+              color: #449b85;
+
+        }
+
+        .Copyright-box{
+            
+            text-align: center;
+            font-weight: bolder;
+            padding   : 5%;
+
+        }
+
+        .Copyright-icon{
+            
+            color: #357162;
+            margin-bottom: 4rem;
+            margin-left: 5.5rem;
+          
+
+        }
+
+        .Copyright-icon:hover{
+          
+            color: #28a788;
+            transition: 0.2s;
+        
+        }
+
+
+
+
+        /* Social Handles */
+
+
+        .Social-media{
+          
+
+          text-align: center;
+          font-weight: bolder;
+          padding   : 5%;
+
+        }
+
+        .Social-media p{
+          
+          margin-top: 3.4rem;
+
+        }
+
+        .social-icon{  
+          
+          margin-top:2rem; 
+          color: #357162;
+          margin-bottom: 1rem;
+          padding:10px;
+
+        }
+
+
+        .social-icon:hover{
+          
+            color: #28a788;
+            transition: 0.2s;
+        
+        }
+
+        .Social-media p{
+                
+                color:#357162;
+                text-align: center;
+                font-size: 2rem;
+                margin-bottom: 3rem;
+
+        }
+
+        .Social-media p:hover{
+
+            color: #28a788;
+            transition: 0.2s;
+
+        }
+
+
+
+        /* Get A Newsletter  */
+
+
+        .Newsletter{
+            
+          text-align: center;
+          font-weight: bolder;
+          padding   : 5%;
+        
+        }
+
+
+        .Newsletter p{
+                
+          color:#357162;
+          text-align: left;
+          font-size: 2rem;
+          margin-top: 3rem;
+
+        }
+
+        .Newsletter p:hover{
+
+          color: #28a788;
+          transition: 0.2s;
+
+        }
+
+        .Newsletter h6{
+            
+            font-size: 1rem;
+            text-align: left;
+            margin-bottom: 1rem;
+            
+        }
+
+        .footer-form{
+
+
+        text-align: left;
+        font-weight: 500;
+        width: fit-content;
+
+
+        }
+
+        .footer-form input{
+
+        border:0;
+        outline: none;
+        height: 70px;
+        width: 400px;
+        font-size: 16px;
+       
+
+
+        }
+
+
+        .footer-form button{
+
+          border-radius: 1px;
+          border:none;
+          background: #357162;
+          height: 70px;
+          width: 200px;
+          cursor: pointer;
+
+          }
+
+
+          .footer-form button:hover{
+
+          background-color: #449b85;
+
+          }
+
+
+
+      </style>
+
+
+
+
+
+    <!-- Font Awesome Files -->
+    <script src="https://kit.fontawesome.com/aed243d69b.js" crossorigin="anonymous"></script>
+
+
+    <!--    Bootstrap js files-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+
+
+<!-- Body Section -->
+
+<body>
+    
+
+    <!-- Section 1-->
+
+    <header>
+            
+      <!--Navbar-->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-colored">
+           
+           <h4 class = "logo">Farm Ez</h4>
+
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+   
+           <div class="collapse navbar-collapse" id="navbarNav">
+           
+             <ul class="navbar-nav ml-auto">
+               
+                <li class="nav-item"><a class="nav-link" href="/hi">होमे </a></li>
+               
+                <li class="nav-item"><a class="nav-link" href="/hiabout">हमारे बारे में</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/hicontact">संपर्क करें</a></li>
+
+             </ul>
+      
+
+             <li class="nav-item"><a href="/himap"><button class="custom-btn2">जमीन की तलाश करें!</button></a></li>
+
+
+           </div>
+
+      </nav>
+
+  </header>
+    
+
+  
+    <!-- Section 2 : Registration Form -->
+
+    <section id = "Register">
+
+            <div class = "Registerdiv">      
+
+                <h1 class = "Register-heading"><span>भूमि पंजीकरण प्रपत्र</span></h1>
+               
+                
+                <!-- Registration form -->
+
+                <form action="/hisubmit" method="post" >
+
+                  
+                  <label for="full-name">नाम</label><br>
+                  <input type="text" id="full-name" name="full-name" placeholder="अपना पूरा नाम भरें" required>
+
+                  <label for="Age">आयु</label><br>
+                  <input type="number" id="Age" name="Age" placeholder="अपनी आयु दर्ज करें" required><br>
+          
+                  <label for="email">ईमेल आईडी</label><br>
+                  <input type="email" id="email" name="email" placeholder="अपना ईमेल पता दर्ज करें">
+          
+                  <label for="phone">मोबाइल नंबर</label><br>
+                  <input type="tel" id="phone" name="phone" placeholder="अपना फोन नंबर डालें" required>
+          
+
+                  <label for="district">ज़िला</label>
+                  <select id="district" name="district" required>
+                       <option value="">--चुनें जिला--</option>
+                       <option value="Ahmednagar">अहमदनगर</option>
+                       <option value="Akola">अकोला</option>
+                       <option value="Amravati">अमरावती</option>
+                       <option value="Aurangabad">औरंगाबाद</option>
+                       <option value="Bhandara">भंडारा</option>
+                       <option value="Buldhana">बुलढाना</option>
+                       <option value="Chandrapur">चंद्रपुर</option>
+                       <option value="Dhule">धुले</option>
+                       <option value="Gadchiroli">गडचिरोली</option>
+                       <option value="Gondia">गोंदिया</option>
+                       <option value="Hingoli">हिंगोली</option>
+                       <option value="Jalgaon">जलगांव</option>
+                       <option value="Jalna">जलना</option>
+                       <option value="Kolhapur">कोल्हापुर</option>
+                       <option value="Latur">लातूर</option>
+                       <option value="Mumbai City">मुंबई शहर</option>
+                       <option value="Mumbai Suburban">मुंबई उपनगर</option>
+                       <option value="Nagpur">नागपुर</option>
+                       <option value="Nanded">नांदेड़</option>
+                       <option value="Nandurbar">नंदुरबार</option>
+                       <option value="Nashik">नासिक</option>
+                       <option value="Osmanabad">उस्मानाबाद</option>
+                       <option value="Palghar">पल्घर</option>
+                       <option value="Parbhani">परभनी</option>
+                       <option value="Pune">पुणे</option>
+                       <option value="Raigad">रायगढ़</option>
+                       <option value="Ratnagiri">रत्नागिरि</option>
+                       <option value="Sangli">सांगली</option>
+                       <option value="Satara">सतारा</option>
+                       <option value="Sindhudurg">सिंधुदुर्ग</option>
+                       <option value="Solapur">सोलापुर</option>
+                       <option value="Thane">थाने</option>
+                       <option value="Wardha">वर्धा</option>
+                       <option value="Washim">वाशिम</option>
+                       <option value="Yavatmal">यवतमाल</option>
+                  </select>
+                  
+                  
+                  <label for="taluka">तालुका</label><br>
+                  <select id="taluka" name="taluka" required>
+                    <option value="">--तालुका का चयन करें--</option> 
+                  </select>
+
+
+                  <label for="landsize">भूमि का आकार</label><br>
+                  <input type="number" id="landsize" name="landsize" placeholder="अपनी भूमि का आकार एकड़ में दर्ज करें" required><br>
+
+          
+                  <label for="address">पता</label><br>
+                  <textarea id="address" name="address" placeholder="Street Name, City Name - Pincode" required></textarea>
+
+                  <button type="button" onclick="getLocationByAddress()">दर्ज पते से स्थान प्राप्त करें</button><br>
+
+                  <button type="button" onclick="getLocation()">वर्तमान डिवाइस का उपयोग करके लाइव स्थान प्राप्त करें</button><br>
+
+                  <label for="latitude">Latitude:</label>
+                  <input type="text" id="latitude" name="latitude">
+
+                  <label for="longitude">Longitude:</label>
+                  <input type="text" id="longitude" name="longitude">
+          
+
+                  <label for="other-info">अन्य सूचना</label>
+                  <textarea id="other-info" name="other-info" placeholder="कोई अतिरिक्त जानकारी दर्ज करें"></textarea>
+                  
+                  
+                  
+                  <input type="submit" value="जमा करना">
+                  <input type="reset" value="पुनः भरें">
+                  
+                 
+                </form>
+               
+           </div>
+
+
+    </section>
+    <script>
+      function getLocationByAddress() {
+        const address = document.getElementById("address").value.trim();
+      
+        if (address === "") {
+          alert("Please enter a valid address.");
+          return;
+        }
+      
+        const geocodingUrl = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(
+          address
+        )}&format=json`;
+      
+        fetch(geocodingUrl)
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.length > 0) {
+              const latitude = data[0].lat;
+              const longitude = data[0].lon;
+              document.getElementById("latitude").value = latitude;
+              document.getElementById("longitude").value = longitude;
+            } else {
+              alert("दिए गए पते पर स्थान नहीं मिला.");
+            }
+          })
+          .catch((error) => {
+            alert("स्थान डेटा लाने में त्रुटि. कृपया बाद में पुन: प्रयास करें।");
+            console.error(error);
+          });
+      }
+    </script>
+      
+    <script>
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+            alert("जियोलोकेशन इस ब्राउज़र द्वारा समर्थित नहीं है.");
+          }
+        }
+        
+        function showPosition(position) {
+          document.getElementById("latitude").value = position.coords.latitude;
+          document.getElementById("longitude").value = position.coords.longitude;
+        }
+    </script>
+
+
+
+    <!-- Section 7 :: Footer Section -->
+
+
+    <section id="Footer">
+          
+        
+      <div class = "row">
+
+        
+        <!-- Logo And Copyright Rights -->
+        
+        <div class = "Copyright-box col-lg-4">
+
+          <div class = "footer-logo">
+
+            <i class="Copyright-icon fas fa-tractor fa-4x"></i>
+            <h6 class = "copyright-logo">Farm Ez</h6>
+            <p>@2023.Farm Ez. All rights reserved.</p>
+          
+          </div>
+
+        
+        </div>
+
+
+
+        <div class = "Social-media col-lg-4">
+          
+          <p>नेत्वोर्क </p>
+          
+          <div class = "Handles"> 
+
+            
+            <i  class= "social-icon fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+            <i  class= "social-icon fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+            <i  class= "social-icon fa fa-reddit-square fa-3x" aria-hidden="true"></i>
+            <i  class= "social-icon fa fa-envelope-square fa-3x" aria-hidden="true"></i>
+          
+
+          </div>
+    
+
+        </div>
+
+
+
+        <div class = "Newsletter col-lg-4">
+          
+          <p>एक समाचार पत्र प्राप्त करें!</p>
+          
+          <div class = "News">
+             
+               <h6>दैनिक अपडेट के लिए हमारे न्यूज़लेटर की सदस्यता लें।</h6>
+               
+
+               <form>
+                   <input type = "email" name = "Email" placeholder = "आपकी ईमेल आई.डी" required>
+                   <button class = "submit-btn" type="submit" class="btn">जमा करना</button>
+                </form>
+
+
+          </div>
+    
+
+        </div>
+
+        
+      </div>
+        
+
+ </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<!-- Javascript Functionality-->
+
+
+<script>
+
+
+  // This add scroll functionality.
+  window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('nav');
+    var scrollPosition = window.pageYOffset;
+  
+    if (scrollPosition > 0) {
+      navbar.classList.add('navbar-colored');
+    } else {
+      navbar.classList.remove('navbar-colored');
+    }
+
+  });
+ 
+
+  // This Restrict the taluka to their respective district.
+  // Define an array of talukas by district.
+  const talukasByDistrict = {
+    
+    Akola: ['अकोट', 'बालापुर', 'मुर्तिजापुर', 'तेल्हारा'],
+    Ahmednagar: ['अकोला', 'जामखेड़', 'कर्जत', 'कोपरगाँव', 'नगर', 'नेवासा', 'परनेर', 'पथर्डी', 'रहाटा', 'शेवगाँव', 'श्रीगोंडा', 'श्रीरामपुर'],
+    Amravati: ['अचलपुर', 'भाटकुली', 'चंदूर रेलवे', 'चंदुरबाजार', 'दरियापुर', 'धामनगांव रेलवे', 'मोर्शी', 'नंदगांव-खंडेश्वर', 'तेओसा', 'वरुद'],
+    Aurangabad: ['औरंगाबाद', 'गंगापुर', 'कन्नड़', 'खुल्दाबाद', 'पैठन', 'फुलंबरी', 'सिल्लोड', 'वैजापुर'],
+    Bhandara: ['भंडारा', 'लखंदूर', 'मोहाड़ी', 'पौनी', 'सकोली', 'तुमसर'],
+    Buldana: ['बुलदाना', 'चिखली', 'देउलगाँव राजा', 'जलगाँव जामोद', 'खामगाँव', 'लोनार', 'महकर', 'मोताला', 'नंदुरा', 'संग्रामपुर', 'शेगाँव'],
+    Chandrapur: ['बल्लारपुर', 'भद्रावती', 'ब्रह्मपुरी', 'चंद्रपुर', 'चिमूर', 'गोंदपिपरी', 'जिवती', 'कोरपना', 'मूल', 'नागभीर', 'पोंभुरना','राजुरा', 'सावली', 'वरोरा'],
+    Dhule: ['धुले', 'सकरी', 'शिंदखेड़ा', 'शीरपुर', 'तालोदे'],
+    Gadchiroli: ['अहेरी', 'अरमोरी', 'धनोरा', 'एटापल्ली', 'गढ़चिरौली', 'कुरखेड़ा', 'देसाईगंज (वडसा)', 'सिरोंचा'],
+    Gondia: ['देवरी', 'गोंदिया', 'गोरेगांव', 'सड़क-अर्जुनी', 'तिरोरा'],
+    Hingoli: ['औंधा नागनाथ', 'बसमत', 'हिंगोली', 'कलामनुरी', 'सेनगांव'],
+    Jalgaon: ['अमलनेर', 'भड़गाँव', 'भुसावल', 'बोडवाड़', 'चालिसगाँव', 'चोपड़ा', 'धरनगाँव', 'एरंडोल', 'जलगाँव', 'जामनेर', 'मुक्ताईनगर', 'पचोरा', 'परोला', 'रावर', 'यावल'],
+    Jalna: ['अंबद', 'बदनापुर', 'भोकरदन', 'घनसावंगी', 'जाफराबाद', 'जालना', 'मंथा', 'परतुर'],
+    Kolhapur: ['अजारा', 'बावड़ा', 'चांदगढ़', 'गढ़िंगलाज', 'हतकनंगले', 'करवीर', 'पन्हाला', 'राधानगरी', 'शाहुवाड़ी', 'शिरोल'],
+    Latur: ['अहमदपुर', 'औसा', 'चाकुर', 'देवनी', 'जलकोट', 'लातूर', 'नीलंगा', 'रेनापुर', 'शिरूर-अनंतपाल', 'उदगीर'],
+    MumbaiCity: ['बोरीवली','कांदिवली','दहिसर'],
+    MumbaiSuburban: ['अंधेरी','बांद्रा', 'कुर्ला'],
+    Nagpur: ['हिंगना', 'कम्पटी', 'कटोल', 'नागपुर पूर्व', 'नागपुर दक्षिण', 'नागपुर पश्चिम', 'उमरेड'],
+    Nanded: ['अर्धपुर', 'भोकर', 'बिलोली', 'देगलूर', 'धर्मबाद', 'हड़गाँव', 'हिमायतनगर', 'कंधार', 'किनवट', 'लोहा', 'माहुर', 'मुदखेड़', 'मुखेड़', 'नांदेड़ उत्तर', 'नांदेड़ दक्षिण', 'नायगांव (खैरगांव)', 'उमरी'],
+    Nandurbar: ['अक्कलकुवा', 'अकरानी', 'नंदुरबार', 'नवापुर', 'शहदा', 'तलोड'],
+    Nashik: ['बागलान', 'चांदवड़', 'देओला', 'डिंडोरी', 'इगतपुरी', 'कलवां', 'मालेगांव', 'मनमाड', 'नंदगांव', 'नासिक पूर्व', 'नासिक पश्चिम', 'निफाड़', 'पेंट', 'सिन्नर', 'सुरगना', 'त्र्यंबकेश्वर', 'येओला'],
+    Osmanabad: ['कलंब', 'लोहारा', 'ओमरगा', 'उस्मानाबाद', 'परंडा', 'तुलजापुर', 'उमरगा'],
+    Parbhani: ['गंगाखेड़', 'जिंटूर', 'मनवाथ', 'परभणी', 'पूर्णा', 'सैलू', 'सोनपेठ'],
+    Pune: ['अंबेगांव', 'बारामती', 'भोर', 'दौंड', 'हवेली', 'इंदापुर', 'जुन्नार', 'खेड़', 'मावल', 'मुलशी', 'पुणे शहर', 'पुरंदर', ' शिरूर', 'वेल्हे'],
+    Raigarh: ['अलीबाग', 'कर्जत', 'खालापुर', 'महाड', 'मानगांव', 'म्हसला', 'मुरुद', 'पनवेल', 'पेन', 'पोलादपुर', 'रोहा', 'श्रीवर्धन', 'सुधागढ़' , 'तला', 'उरण'],
+    Ratnagiri: ['चिपलून', 'दापोली', 'गुहागर', 'खेड़', 'लांजा', 'मंदंगड़', 'राजापुर', 'रत्नागिरी', 'संगमेश्वर'],
+    Sangli: ['खानापुर', 'मिराज', 'वालवा', 'अटपदी'],
+    Satara: ['जाओली', 'खतव', 'कोरेगांव', 'महाबलेश्वर', 'आदमी', 'पाटन', 'फलटन', 'सतारा'],
+    Sindhudurg: ['देवगढ़', 'डोडामार्ग', 'कंकावली', 'कुदल', 'मालवान', 'सावंतवाड़ी', 'वैभववाड़ी', 'वेंगुर्ला'],
+    Solapur: ['अक्कलकोट', 'बरशी', 'करमाला', 'मधा', 'मालशिरस', 'मंगलवेधे', 'उत्तर सोलापुर', 'पंढरपुर', 'संगोले', 'दक्षिण सोलापुर'],
+    Thane: ['अंबरनाथ', 'भिवंडी', 'दहानू', 'जौहर', 'कल्याण', 'मुरबाद', 'पालघर', 'शहापुर', 'तलासरी', 'ठाणे', 'उल्हासनगर', 'वड़ा', 'वसई ', 'विक्रमगढ़'],
+    Wardha: ['अर्वी', 'अष्टि', 'देवली', 'हिंगनघाट', 'करंजा', 'समुद्रपुर', 'सेलू', 'वर्धा'],
+    Washim: ['करंजा', 'मालेगांव', 'मंगरूलपीर', 'रिसोद', 'वाशिम'],
+    Yavatmal: ['अर्नी', 'बाबुलगाँव', 'दरवा', 'दिगरास', 'घटांजी', 'कलम्ब', 'केलापुर', 'महागाँव', 'नेर', 'पुसद', 'रालेगाँव', 'उमरखेड', 'वानी ', 'यवतमाल']
+
+  };
+
+  // Get references to the district and taluka dropdown lists
+  const districtDropdown = document.getElementById('district');
+  const talukaDropdown = document.getElementById('taluka');
+
+  // Add an event listener to the district dropdown list
+  districtDropdown.addEventListener('change', (event) => {
+    // Get the selected district
+    const selectedDistrict = event.target.value;
+
+    // Clear the taluka dropdown list
+    talukaDropdown.innerHTML = '<option value="">--Select Taluka--</option>';
+
+    // Populate the taluka dropdown list with the talukas for the selected district
+    talukasByDistrict[selectedDistrict].forEach((taluka) => {
+      const option = document.createElement('option');
+      option.value = taluka;
+      option.text = taluka;
+      talukaDropdown.appendChild(option);
+    });
+
+  });
+
+
+              
+</script>
+
+
+
+</body>
+
+</html>

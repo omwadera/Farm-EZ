@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<!-- Head Section -->
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>आमच्याबद्दल</title>
+
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+     <style>
+
+     /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+
+    *{
+        
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: 'Poppins' , sans-serif;
+
+    }
+
+    html{
+    
+        scroll-behavior: smooth;    
+
+    }
+
+
+    /* Code Goes Here */
+
+    /* Section 1 - header  */
+
+    header
+    {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+
+    /* Farm Ez Logo  */
+
+    .logo
+    {
+    
+    margin-left: 1rem;
+    color: whitesmoke;
+    font-size: 3rem;
+    font-weight: bolder;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    }
+
+    .logo:hover{
+    
+    color:#347464;
+    transition: 0.5s;
+
+    }
+
+
+
+    /* Navigation bar */
+
+    .navbar{ 
+        
+        height:auto;
+        width: 100%;
+        padding : 0 0 4.5rem;
+        
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        
+    }
+    
+
+    .navbar-colored {
+
+    background-color: #3d7b67;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease-in-out;
+
+    }
+
+    .nav-item{
+    
+        font-family: 'Poppins' , sans-serif;
+        font-size: 1rem;
+        padding: 1rem;
+        font-weight: bolder;
+        
+    }  
+
+    /* Navbar Ke text ke liye hai  */
+
+
+    .navbar-nav .nav-link {
+        color: #ffffff; /* or use the shorthand notation color: white; */
+        
+    }
+
+
+    .navbar-nav .nav-link:hover{
+    
+    transition: 0.5s;
+    color: #347464;
+    
+
+    }
+
+    .navbar-toggler{
+
+        color:#FFFFFF;
+
+    }
+
+
+
+
+    /* Login Button */
+
+    .custom-btn {
+
+    background-color: #FFFFFF; /* white background */
+    color: #347464; /* green text color */
+
+    border: none;
+    border-radius: 4px;
+    
+    padding: 5px 10px;
+
+    letter-spacing: 2px;
+    
+    font-size: 1.5rem;
+    font-weight: 800;
+    
+    text-transform: uppercase;
+    cursor: pointer;
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+
+    }
+
+    .custom-btn:hover {
+
+    background-color: #347464; /* green background on hover */
+    color: #FFFFFF; /* white text color on hover */
+
+    }
+
+    .custom-btn:active {
+
+    background-color: #008a3d; /* darker green background on active */
+    color: #FFFFFF; /* white text color on active */
+
+    }
+
+    /* Register button custom button*/
+
+    .custom-btn2{
+
+    background-color:#347464; /* white background */
+    color: #FFFFFF; /* green text color */
+
+    border: none;
+    border-radius: 4px;
+    
+    padding: 5px 10px;
+    
+    font-size: 1.5rem;
+    font-weight: 800;
+    
+    text-transform: uppercase;
+    cursor: pointer;
+
+    letter-spacing: 5px;
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+
+    }
+
+    .custom-btn2:hover {
+
+    background-color: #548c7c; /* green background on hover */
+    color: #FFFFFF; /* white text color on hover */
+
+    }
+
+    .custom-btn2:active {
+
+    background-color: #548c7c; /* darker green background on active */
+    color: #FFFFFF; /* white text color on active */
+    
+
+    }
+
+
+
+    /*   About Us  */
+
+    #about-us {
+    
+    padding: 50px;
+    background-color: whitesmoke;
+    text-align: center;
+    margin-top: 2rem;
+
+    }
+
+    .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    }
+
+    .column {
+
+        position: relative;
+        flex: 1;
+        padding: 50px;
+        margin-bottom: 30px;
+    
+
+    }
+
+    .about-img {
+    width: 100%;
+    height: auto;
+    }
+
+
+    .feature-heading{
+    
+    text-align: center;
+    padding:  2rem 0;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    
+
+    }
+
+    .feature-heading span{
+
+    
+        background: #357162;
+        color: #ffffff;
+        display: inline-block;
+        padding: 0.5rem 3rem;
+        clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+
+    }
+
+    .feature-heading span:hover{
+
+        background: #548c7c;
+        box-shadow: #111;
+
+    }
+
+
+
+    .about-heading{
+
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 3rem;
+    text-align: center;
+    
+    }
+
+    .about-heading-6{
+    
+    font-weight: bolder;
+    margin-top: 30px;
+
+    }
+
+    .about-para{
+        
+        margin-top: 30px;
+        font-size: 1.2rem;
+        text-align: left;
+        font-weight: 600;
+        
+    }
+
+
+
+
+    /*   Accordian!   */
+
+
+    #Accordian-Section{
+    
+        padding: 50px;
+        background-color: #357162; 
+        text-align: center;
+        
+    }
+    
+    
+    .accordian-heading{
+        
+        text-align: center;
+        padding:  2rem 0;
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        
+    
+    }
+    
+    .accordian-heading span{
+    
+        
+        background: #1f6351;
+        color: #ffffff;
+        display: inline-block;
+        padding: 0.5rem 3rem;
+        clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+    
+    }
+    
+    .accordian-heading span:hover{
+    
+            background: #548c7c;
+            box-shadow: #111;
+    
+    }
+    
+    
+    #accordian{
+        
+        margin: 100px auto;
+        width: 80%;
+    
+    }
+    
+    #accordian li{
+    
+        list-style: none;
+        width: 100%;
+        margin-bottom: 10px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 4px;
+        text-align: left;
+        
+    }
+    
+    #accordian li label{
+    
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        font-size: 2rem;
+        font-weight: 900;
+        
+        cursor: pointer;
+        color: #1f6351;
+
+        margin-bottom: 3rem;
+        
+    
+    }
+    
+    #accordian li label span{
+    
+        
+        transform: rotate(90deg);
+        font-size: 22px;
+        color:#357162;
+    
+    
+    }
+    
+    #accordian label + input[type="radio"]{
+    
+            display: none;
+            
+    }
+    
+    #accordian .content{
+    
+        padding: 0 10px;
+        line-height: 26px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s;
+
+    
+    }
+    
+    #accordian label + input[type="radio"]:checked + .content{
+    
+        max-height: 100rem;
+    
+    }
+    
+    .accordian-para{
+
+        letter-spacing: 1px;
+        text-align: left;
+    
+        font-size: 1.3rem; 
+        font-weight: 800;
+
+        color: #357162;
+
+    }
+    
+    
+
+
+
+    /*  Section  :: Footer  */
+
+    
+    #footer{
+    
+    position: relative;
+    z-index: 2;
+
+    padding : 5%  10%;
+    background-color: whitesmoke;
+
+    }
+
+
+    /* Copyright logo  */
+
+
+    .copyright-logo{
+
+
+        float:right;
+        margin-right: 5rem;
+
+        color: #357162;
+        font-size: 3rem;
+        font-weight: bolder;
+        cursor: pointer;
+            
+
+    }
+    .copyright-logo:hover{
+
+        color: #449b85;
+
+    }
+
+    .Copyright-box{
+        
+        text-align: center;
+        font-weight: bolder;
+        padding   : 5%;
+
+    }
+
+    .Copyright-icon{
+        
+        color: #357162;
+        margin-bottom: 4rem;
+        margin-left: 5.5rem;
+    
+
+    }
+
+    .Copyright-icon:hover{
+    
+        color: #28a788;
+        transition: 0.2s;
+    
+    }
+
+
+
+
+    /* Social Handles */
+
+
+    .Social-media{
+
+    text-align: center;
+    font-weight: bolder;
+    padding   : 5%;
+
+    }
+
+    .social-icon{  
+
+    color: #357162;
+    margin-bottom: 1rem;
+    padding:10px;
+
+    }
+
+
+    .social-icon:hover{
+    
+        color: #28a788;
+        transition: 0.2s;
+    
+    }
+
+    .Social-media p{
+            
+            color:#357162;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+
+    }
+
+    .Social-media p:hover{
+
+        color: #28a788;
+        transition: 0.2s;
+
+    }
+
+
+
+    /* Get A Newsletter  */
+
+
+    .Newsletter{
+        
+    text-align: center;
+    font-weight: bolder;
+    padding   : 5%;
+    
+    }
+
+
+    .Newsletter p{
+            
+    color:#357162;
+    text-align: left;
+    font-size: 2rem;
+    margin-top: 3rem;
+
+    }
+
+    .Newsletter p:hover{
+
+    color: #28a788;
+    transition: 0.2s;
+
+    }
+
+    .Newsletter h6{
+        
+        font-size: 1rem;
+        text-align: left;
+        margin-bottom: 1rem;
+        
+    }
+
+
+    form{
+
+
+        text-align: left;
+        font-weight: 500;
+        width: fit-content;
+
+
+    }
+
+    form input{
+
+    border:0;
+    outline: none;
+    height: 70px;
+    width: 400px;
+    font-size: 16px;
+
+
+    }
+
+
+    form button{
+
+        border-radius: 1px;
+        border:none;
+        background: #357162;
+        height: 70px;
+        width: 200px;
+        cursor: pointer;
+
+    }
+
+
+    form button:hover{
+
+        background-color: #449b85;
+
+    }
+
+     </style>
+
+
+    <!-- Font Awesome Files -->
+    <script src="https://kit.fontawesome.com/aed243d69b.js" crossorigin="anonymous"></script>
+
+
+    <!--    Bootstrap js files-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+
+
+
+<!-- Body Section -->
+
+<body>
+    
+     <!-- Section 1-->
+
+     <header>
+            
+        <!--Navbar-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-colored">
+             
+             <h4 class = "logo">Farm EZ</h4>
+            
+
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+             </button>
+     
+             <div class="collapse navbar-collapse" id="navbarNav">
+             
+               <ul class="navbar-nav ml-auto">
+                 
+                  <li class="nav-item"><a class="nav-link" href="/ma">मुख्यपृष्ठ</a></li>
+                 
+                  <li class="nav-item"><a class="nav-link" href="/maabout">बद्दल </a></li>
+                  
+                  <li class="nav-item"><a class="nav-link" href="/macontact">आमच्याशी संपर्क साधा</a></li>
+
+               </ul>
+        
+
+               <li class="nav-item"><a href="/mafarmer"><button class="custom-btn2">जमिनीची नोंदणी करा!
+               </button></a></li>
+
+             </div>
+        </nav>
+
+   </header>
+     
+     
+      <!-- About Us -->
+
+      <section id = "about-us">
+            
+            <h1 class = "feature-heading"><span>आमच्याबद्दल!</span></h1>
+                          
+            <div class="row">
+
+              <div class="column">
+              
+                <h3 class = "about-heading">Farm Ez संघ</h3>
+                <h6 class = "about-heading-6"> आम्ही Farm EZ का लाँच केले</h6>
+
+                <p class = "about-para">फार्म ईज़ एक एग्रो-टेक वेबसाइट है, जिसका विजन किसान जीवन में सुधार लाने और रोजगार पैदा करने के लिए कृषि क्षेत्र में जागरूकता पैदा करना है।</p>
+                <p class = "about-para">हम चार सॉफ्टवेयर डेवलपर की टीम ने कृषि क्षेत्र पर प्रत्यक्ष प्रभाव के साथ इस पहल की शुरुआत की। हम काम की जरूरत वाले श्रमिकों के साथ मुफ्त भूमि वाले लोगों को जोड़ने का एक साधन चाहते थे।</p>
+                
+              </div>
+ 
+
+              <div class="column">
+                <img class = "about-img" src="carousel/team.jpg" alt="Team Photo">
+              </div>
+ 
+ 
+            </div>
+ 
+            
+       </section>
+
+
+    <!--  Accordian ::  -->
+    
+    <section id = "Accordian-Section">
+
+
+        <h1 class = "accordian-heading"><span>पुढे वाचा!</span></h1>
+       
+        <ul id = "accordian">
+       
+
+             <li>
+                 
+                 <label for="first">ही वेबसाइट का? <span>&#x3e</span> </label>
+                 <input type="radio" name="accordian" id = "first" checked>         
+                 <div class = "content"> 
+                      
+
+                 <p class = "accordian-para">
+                    
+                    अॅग्रीकल्चर वेब अॅप्लिकेशन हा असाच एक उपाय आहे ज्याचा उद्देश कृषी उद्योगातील न वापरलेल्या जमिनीच्या महत्त्वाच्या समस्येला तोंड देणे आहे. आमचे अॅप शेतकऱ्यांना त्यांच्या जमिनीच्या लागवडीबद्दल मौल्यवान अंतर्दृष्टी प्रदान करताना त्यांची जमीन इतर शेतकऱ्यांना भाडेतत्त्वावर देण्यात मदत करण्यासाठी डिझाइन केलेले आहे.
+                    असे करून, आम्ही एक व्यवहार्य व्यवसाय संधी म्हणून कृषी उद्योगाला प्रोत्साहन देण्याचे आणि अर्थव्यवस्थेच्या या महत्त्वपूर्ण क्षेत्राचा विकास करण्यास मदत करण्याचे आमचे ध्येय आहे.<br><br>
+
+                    आमच्या कार्यसंघाने शेतक-यांना त्यांच्या जमिनीच्या वापराविषयी माहितीपूर्ण निर्णय घेण्यासाठी आवश्यक असलेली माहिती प्रदान करण्यासाठी कृषी वेब ऍप्लिकेशनची काळजीपूर्वक रचना केली आहे. अ‍ॅप विशिष्ट प्रदेशातील सर्वात सामान्यपणे घेतलेल्या पिकांचा डेटा आणि इष्टतम उत्पादन आणि नफ्यासाठी लागवडीसाठी सर्वोत्तम पिकांवरील सूचना यासारखी वैशिष्ट्ये प्रदान करते. त्याच्या वापरकर्ता-अनुकूल इंटरफेससह, अॅप माहिती गोळा करणे आणि इनपुट प्रक्रिया सुव्यवस्थित करते, शेतकऱ्यांना वापरण्यासाठी ते सोपे आणि अंतर्ज्ञानी बनवते.<br><br>
+ 
+                    याव्यतिरिक्त, कृषी वेब ऍप्लिकेशन शेतकर्‍यांना त्यांचा डेटा व्हिज्युअलाइज करण्यासाठी एक शक्तिशाली साधन प्रदान करते. परस्परसंवादी नकाशाच्या मदतीने, शेतकरी त्यांची जमीन आणि जवळपासच्या भागात घेतलेली विविध पिके सहजपणे पाहू शकतात. याव्यतिरिक्त, अॅप शेतकऱ्यांना त्यांच्या पीक उत्पादनाचे विश्लेषण करण्यात आणि विविध पिकांची नफा समजून घेण्यास मदत करण्यासाठी पाई चार्ट आणि बार आलेख प्रदान करते.<br><br>
+
+                    शेतकऱ्यांना मौल्यवान अंतर्दृष्टी आणि त्यांची जमीन प्रभावीपणे व्यवस्थापित करण्यासाठी साधनांसह सक्षम करून, आम्ही कृषी उद्योगासाठी अधिक शाश्वत आणि समृद्ध भविष्य साध्य करण्यासाठी कार्य करत आहोत. तुम्ही शेतकरी असाल की तुमची जमीन भाड्याने देऊ इच्छित असाल किंवा तुमच्या शेतीच्या पर्यायांचा विस्तार करू इच्छित असाल, कृषी वेब अॅप्लिकेशन तुम्हाला तुमची उद्दिष्टे साध्य करण्यात आणि कृषी उद्योगाच्या वाढीस हातभार लावण्यासाठी एक आदर्श साधन आहे.
+        
+
+                 </p>
+                        
+                 
+                 
+                  </div>
+             
+            </li>
+
+            <li>
+            
+                <label for="second">वर्णन:- <span>&#x3e</span> </label>
+                <input type="radio" name="accordian" id = "second" >         
+               
+                <div class = "content"> 
+                     
+                    <p class = "accordian-para">
+                        
+                        शेतकऱ्यांना जमीन भाडेतत्त्वावर आणि शेतीच्या निर्णयांमध्ये मदत करण्यासाठी डिझाइन केलेल्या वेब ऍप्लिकेशनद्वारे अॅग्रोटेक डोमेनसाठी हा प्रकल्प एक उपाय प्रदान करतो. जमीन आणि क्षेत्राविषयी सर्वसमावेशक माहिती प्रदान करून, सर्वात सामान्यपणे पिकवलेली पिके आणि इष्टतम पीक शिफारशींसह, शेतकरी त्यांचे कृषी उत्पन्न वाढवणारे माहितीपूर्ण निर्णय घेऊ शकतात.<br><br>
+                        अपचा वापरकर्ता-अनुकूल इंटरफेस प्रक्रिया सुव्यवस्थित करतो, ज्यामुळे शेतकरी गंभीर डेटामध्ये सहज प्रवेश करू शकतात आणि इनपुट करू शकतात, त्यांचा वेळ आणि श्रम वाचतात.<br><br>
+                        याव्यतिरिक्त, अनुप्रयोग नोंदणीकृत शेताच्या स्थानाचा प्लॉट केलेला नकाशा पाहण्याची क्षमता प्रदान करतो, ज्यामुळे शेतकर्‍यांना त्यांच्या जमिनीची कल्पना करणे आणि स्थान-आधारित निर्णय घेणे सोपे होते.
+
+
+   
+                    </p>
+                        
+                
+                 </div>
+ 
+            </li>
+
+
+            <li>
+                <label for="third">सीमा:- <span>&#x3e</span> </label>
+                <input type="radio" name="accordian" id = "third" >         
+                <div class = "content"> 
+                     
+                     <p class = "accordian-para">
+                      
+                        हा प्रकल्प केवळ महाराष्ट्र राज्यावर केंद्रित आहे, जो संपूर्ण देशाचा प्रतिनिधी असू शकत नाही. त्यामुळे, या प्रकल्पातून काढलेले निष्कर्ष आणि निष्कर्ष भिन्न सामाजिक-आर्थिक आणि सांस्कृतिक पार्श्वभूमी असलेल्या भारतातील इतर प्रदेशांना लागू होणार नाहीत. शिवाय, या प्रकल्पात वापरलेला डेटासेट महाराष्ट्र राज्यासाठी उपलब्ध डेटा स्रोतांपुरता मर्यादित आहे आणि अधिक व्यापक डेटा संकलित केल्यास परिणाम भिन्न असू शकतात.
+                    
+                     </p>
+                
+                 </div>
+            </li>
+
+
+       </ul>
+
+
+
+    </section>
+       
+    
+
+
+
+    <!-- Footer Section -->
+
+    <section id="Footer">
+          
+        
+        <div class = "row">
+  
+          
+          <!-- Logo And Copyright Rights -->
+          
+          <div class = "Copyright-box col-lg-4">
+  
+            <div class = "footer-logo">
+  
+              <i class="Copyright-icon fas fa-tractor fa-4x"></i>
+              <h6 class = "copyright-logo">Farm Ez</h6>
+              <p>@2023.Farm Ez. All rights reserved.</p>
+            
+            </div>
+  
+          
+          </div>
+  
+  
+  
+          <div class = "Social-media col-lg-4">
+            
+            <p>नेटवर्क </p>
+            
+            <div class = "Handles"> 
+  
+              
+              <i  class= "social-icon fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+              <i  class= "social-icon fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+              <i  class= "social-icon fa fa-reddit-square fa-3x" aria-hidden="true"></i>
+              <i  class= "social-icon fa fa-envelope-square fa-3x" aria-hidden="true"></i>
+            
+  
+            </div>
+      
+  
+          </div>
+  
+  
+  
+          <div class = "Newsletter col-lg-4">
+            
+            <p>एक वृत्तपत्र मिळवा!</p>
+            
+            <div class = "News">
+               
+                 <h6>दैनिक अद्यतनांसाठी आमच्या वृत्तपत्राची सदस्यता घ्या.</h6>
+                 
+  
+                 <form>
+                     <input type = "email" name = "Email" placeholder = "आपकी ईमेल आई.डी" required>
+                     <button class = "submit-btn" type="submit" class="btn">प्रस्तुत करणे</button>
+                  </form>
+  
+  
+            </div>
+      
+  
+          </div>
+  
+          
+        </div>
+          
+  
+   </section> 
+
+
+
+     <!-- Java Script -->
+     <script>
+
+
+
+            window.addEventListener('scroll', function() {
+              var navbar = document.querySelector('nav');
+              var scrollPosition = window.pageYOffset;
+
+              if (scrollPosition > 0) {
+                navbar.classList.add('navbar-colored');
+              } else {
+                navbar.classList.add('navbar-colored');
+              }
+            });
+
+
+     </script>
+
+
+
+</body>
+
+</html>

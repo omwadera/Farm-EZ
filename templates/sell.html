@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Profile</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Sell Crops</title>
+    <style>
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+        
+        *{
+          
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Poppins' , sans-serif;
+  
+        }
+
+        /* Section 1 - header  */
+
+      header
+      {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+
+      /* Farm Ez Logo  */
+
+      .logo
+      {
+        
+        margin-left: 1rem;
+        color: whitesmoke;
+        font-size: 3rem;
+        font-weight: bolder;
+        border-radius: 1rem;
+        cursor: pointer;
+
+      }
+
+      .logo:hover{
+        
+        color:#347464;
+        transition: 0.5s;
+
+      }
+
+
+
+      /* Navigation bar */
+
+      .navbar{ 
+          
+          height:auto;
+          width: 100%;
+          padding : 0 0 4.5rem;
+          
+          position: sticky;
+          top: 0;
+          z-index: 999;
+          
+      }
+        
+
+      .navbar-colored {
+
+        background-color: #3d7b67;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+        transition: background-color 0.5s ease-in-out;
+
+      }
+
+      .nav-item{
+      
+            font-family: 'Poppins' , sans-serif;
+            font-size: 1rem;
+            padding: 1rem;
+            font-weight: bolder;
+          
+      }  
+
+      /* Navbar Ke text ke liye hai  */
+
+
+      .navbar-nav .nav-link {
+            color: #ffffff; /* or use the shorthand notation color: white; */
+            
+      }
+
+
+      .navbar-nav .nav-link:hover{
+        
+        transition: 0.5s;
+        color: #347464;
+      
+
+      }
+
+      .navbar-toggler{
+
+          color:#FFFFFF;
+
+      }
+
+      /* Register button custom button*/
+
+      .custom-btn2{
+
+        background-color:#347464; /* white background */
+        color: #FFFFFF; /* green text color */
+
+        border: none;
+        border-radius: 4px;
+        
+        padding: 5px 10px;
+        
+        font-size: 1.5rem;
+        font-weight: 800;
+        
+        text-transform: uppercase;
+        cursor: pointer;
+
+        letter-spacing: 5px;
+        
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+
+      }
+
+      .custom-btn2:hover {
+
+        background-color: #548c7c; /* green background on hover */
+        color: #FFFFFF; /* white text color on hover */
+
+      }
+
+      .custom-btn2:active {
+
+        background-color: #548c7c; /* darker green background on active */
+        color: #FFFFFF; /* white text color on active */
+
+      }
+
+
+
+      /*---- Code For Navigation Bar Ends Here------*/
+
+      /*Main Content*/ 
+      .container {
+        max-width: 400px; /* Adjusted width */
+        margin-top: 11rem;
+        margin-bottom: 5rem;
+        margin-left: 16rem;
+        padding: 30px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .sell-description {
+        font-size: 20px;
+        margin-top:15px;
+        margin-bottom:10px;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    form {
+        margin-top: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-top:10px;
+        margin-bottom: 10px;
+        color: #666;
+    }
+    
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+    }
+    
+    input[type="text"]:focus,
+    input[type="number"]:focus {
+        border-color: #007bff;
+    }
+    
+    input[type="file"] {
+        display: none;
+    }
+    
+    .file-upload-label {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .file-upload-label:hover {
+        background-color: #0056b3;
+    }
+    
+    .file-upload-input {
+        display: none;
+    }
+    
+    .file-name {
+        margin-top: 5px;
+        color: #666;
+    }
+    
+    
+    .price-label,
+    .price-input {
+        display: block;
+        margin-top:15px;
+        margin-bottom: 15px;
+    }
+    
+    
+    input[type="submit"] {
+        background-color: #28a745;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 19px;
+        width: 10rem;
+        transition: background-color 0.3s;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #218838;
+    }
+ 
+   
+        /* Footer Section :: */
+
+        #footer{
+        
+            position: relative;
+            z-index: 2;
+    
+            padding : 2%  8%;
+            background-color: whitesmoke;
+    
+          }
+    
+          .footer-logo{
+              
+            margin-top: 4rem;
+    
+          }
+          
+          .row{
+             
+             background-color: #2f6654;
+    
+          }
+    
+            /* Copyright logo  */
+    
+    
+            .copyright-logo{
+    
+    
+                  float:right;
+                  margin-right: 5rem;
+    
+                  color: white;
+                  font-size: 3rem;
+                  font-weight: bolder;
+                  cursor: pointer;
+                      
+    
+            }
+            .copyright-logo:hover{
+    
+                  color: #449b85;
+    
+            }
+    
+            .Copyright-box{
+                
+                text-align: center;
+                font-weight: bolder;
+                padding   : 5%;
+    
+            }
+    
+            .Copyright-icon{
+                
+                color: white;
+                margin-bottom: 4rem;
+                margin-left: 5.5rem;
+            
+            }
+    
+            .Copyright-icon:hover{
+              
+                color: #28a788;
+                transition: 0.2s;
+            
+            }
+    
+            /* Social Handles */
+  
+            .Social-media{
+              
+    
+              text-align: center;
+              font-weight: bolder;
+              padding   : 5%;
+    
+            }
+    
+            .Social-media p{
+              
+              margin-top: 3.4rem;
+    
+            }
+    
+            .social-icon{  
+              
+              margin-top:2rem; 
+              color: white;
+              margin-bottom: 1rem;
+              padding:10px;
+    
+            }
+    
+    
+            .social-icon:hover{
+              
+                color: #28a788;
+                transition: 0.2s;
+            
+            }
+    
+            .Social-media p{
+                    
+              color: white;
+              text-align: center;
+              font-size: 2rem;
+              margin-bottom: 3rem;
+    
+            }
+    
+            .Social-media p:hover{
+    
+                color: #28a788;
+                transition: 0.2s;
+    
+            }
+    
+    
+    
+            /* Get A Newsletter  */
+    
+    
+            .Newsletter{
+                
+              text-align: center;
+              font-weight: bolder;
+              padding   : 5%;
+            
+            }
+    
+    
+            .Newsletter p{
+                    
+              color: white;
+              text-align: left;
+              font-size: 2rem;
+              margin-top: 3rem;
+    
+            }
+    
+            .Newsletter p:hover{
+    
+              color: #28a788;
+              transition: 0.2s;
+    
+            }
+    
+            .Newsletter h6{
+                
+                font-size: 1rem;
+                text-align: left;
+                margin-bottom: 1rem;
+                
+            }
+    
+            .footer-form{
+    
+    
+            text-align: left;
+            font-weight: 500;
+            width: fit-content;
+    
+    
+            }
+    
+            .footer-form input{
+    
+            border:0;
+            outline: none;
+            height: 70px;
+            width: 400px;
+            font-size: 16px;
+           
+    
+    
+            }
+    
+    
+            .footer-form button{
+    
+              border-radius: 1px;
+              border:none;
+              background: #f3d34c;
+              height: 70px;
+              width: 200px;
+              cursor: pointer;
+              margin-top: 4px;
+    
+              }
+    
+    
+              .footer-form button:hover{
+    
+              background-color: #449b85;
+    
+              }
+
+
+              .custom-button button {
+              background-color: #f3d34c; /* Change this to your desired color */
+              color: white;
+              border: none;
+              padding: 8px 16px;
+              font-size: 14px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+          }
+
+          .custom-button button:hover {
+              background-color: #f3d13c; /* Change this to the hover color */
+          }
+
+
+         /* Heading */        
+        .feature-heading{
+          
+          text-align: center;
+          padding:  1rem 0;
+          font-size: 3rem;
+          font-weight: 800;
+        
+        }
+        
+        .feature-heading span{
+        
+            
+            background: #357162;
+            color: #ffffff;
+            display: inline-block;
+            padding: 0.5rem 3rem;
+            clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+        
+        }
+        
+        .feature-heading span:hover{
+        
+              background: #548c7c;
+              box-shadow: #111;
+        
+        }
+
+
+    </style>
+
+    <script src="https://kit.fontawesome.com/aed243d69b.js" crossorigin="anonymous"></script>
+
+
+    <!--    Bootstrap js files-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+            
+        <!--Navbar-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-colored">
+             
+             <h4 class = "logo">Farm Ez</h4>
+
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+             </button>
+     
+             <div class="collapse navbar-collapse" id="navbarNav">
+             
+               <ul class="navbar-nav ml-auto">
+                 
+                  <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                 
+                  <li class="nav-item"><a class="nav-link" href="/">About</a></li>
+                  
+                  <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+
+               </ul>
+        
+
+               <li class="nav-item"><a href="/map"><button class="custom-btn2">Search Land!</button></a></li>
+
+             </div>
+        </nav>
+
+   </header>
+
+   
+
+  <div class="container">
+
+        <h1 class = "feature-heading"> <span>Sell Crops!</span></h1>
+
+        <p class="sell-description">
+            Welcome to the Sell Section! Here, farmers can easily list their crops for sale. Just provide the crop's name, an image, price per 10kg, and a brief description. Your listings will be showcased in our marketplace for buyers to explore. Start selling your crops today and connect with potential buyers!
+        </p>
+
+        <form method="post" action="/sell_crops" enctype="multipart/form-data">
+
+            <label>Crop name:</label>
+            <input type="text" name="name" required>
+
+            <label>Crop Image:</label>
+            <label class="file-upload-label">
+                Upload Image
+                <input class="file-upload-input" type="file" name="crop_image" accept="image/*" required onchange="displayImageName(this)">
+            </label>
+            <span class="file-name">No image selected</span>
+
+            <label class="price-label">Price per 10kg:</label>
+            <input class="price-input" type="number" name="price_per_10kg" required>
+
+            <label>Description:</label>
+            <input type="text" name="description" required>
+            
+            <input type="submit" value="Submit">
+
+        </form>
+
+    </div>
+
+    <script>
+        function displayImageName(input) {
+            const fileLabel = document.querySelector('.file-name');
+            if (input.files.length > 0) {
+                fileLabel.textContent = input.files[0].name;
+            } else {
+                fileLabel.textContent = 'No image selected';
+            }
+        }
+    </script>
+
+
+    <!-- Section 7 :: Footer Section -->
+
+
+    <section id="Footer">
+          
+        
+        <div class = "row">
+  
+          
+          <!-- Logo And Copyright Rights -->
+          
+          <div class = "Copyright-box col-lg-4">
+  
+            <div class = "footer-logo">
+  
+              <i class="Copyright-icon fas fa-tractor fa-4x"></i>
+              <h6 class = "copyright-logo">Farm Ez</h6>
+              <p>@2023.Farm Ez. All rights reserved.</p>
+            
+            </div>
+  
+          
+          </div>
+  
+  
+  
+          <div class = "Social-media col-lg-4">
+            
+            <p>Social Handles</p>
+            
+            <div class = "Handles"> 
+  
+              
+              <i  class= "social-icon fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+              <i  class= "social-icon fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+              <i  class= "social-icon fa fa-reddit-square fa-3x" aria-hidden="true"></i>
+              <i  class= "social-icon fa fa-envelope-square fa-3x" aria-hidden="true"></i>
+            
+  
+            </div>
+      
+  
+          </div>
+  
+  
+  
+          <div class = "Newsletter col-lg-4">
+            
+            <p>GET A NEWSLETTER!</p>
+            
+            <div class = "News">
+               
+                 <h6>Subscribe To Our Newsletter For Daily Updates.</h6>
+                 
+  
+                 <form class = "footer-form">
+                     <input type = "email" name = "Email" placeholder = "Your email id" required>
+                     <button class = "submit-btn" type="submit" class="btn">Submit</button>
+                  </form>
+  
+  
+            </div>
+      
+  
+          </div>
+  
+          
+        </div>
+          
+  
+        </div>
+  
+     </section> 
+</body>
+</html>

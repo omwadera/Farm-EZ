@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head Section -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+
+    <!-- Bootstrap CSS File -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      /* Google Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-image: url("");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Register button custom button*/
+
+      .custom-btn2 {
+        background-color: #347464; /* white background */
+        color: #ffffff; /* green text color */
+
+        border: none;
+        border-radius: 4px;
+
+        padding: 5px 10px;
+
+        font-size: 1.5rem;
+        font-weight: 800;
+
+        text-transform: uppercase;
+        cursor: pointer;
+
+        letter-spacing: 5px;
+
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+      }
+
+      .custom-btn2:hover {
+        background-color: #548c7c; /* green background on hover */
+        color: #ffffff; /* white text color on hover */
+      }
+
+      .custom-btn2:active {
+        background-color: #548c7c; /* darker green background on active */
+        color: #ffffff; /* white text color on active */
+      }
+
+      /*---- Code For Navigation Bar Ends Here------*/
+
+      /*  Registration form */
+      #Register {
+        position: relative;
+        z-index: 2;
+        padding: 5% 10%;
+        background-color: rgba(
+          101,
+          156,
+          133,
+          0.8
+        ); /* Update the background color */
+        background-image: url("../static/Images/background\ heade.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .Register-heading {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+        letter-spacing: 2px;
+      }
+
+      .Register-heading span {
+        background: #3a6f62;
+        color: #ffffff;
+        display: inline-block;
+        padding: 0.5rem 3rem;
+        clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+      }
+
+      .Register-heading span:hover {
+        background: #548c7c;
+        box-shadow: #111;
+      }
+
+      /* Css For Registration Form !  */
+
+      form {
+        width: 39rem;
+        margin: auto;
+        margin-bottom: 2rem;
+        color: black;
+        font-weight: 600;
+
+        border-radius: 10px;
+        background-color: #357162;
+        padding: 20px;
+      }
+
+      /* Style the label and input for Age */
+      label[for="Age"] {
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        color: #000000; /* Adjust the color as needed */
+      }
+
+      #Age {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #548c7c; /* Border color for focus */
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+      }
+
+      #Age:focus {
+        outline: none;
+        border-color: #649484; /* Adjust the color when focused */
+      }
+
+      /* Style the form inputs */
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+      }
+
+      label[for="male"],
+      label[for="female"],
+      input[type="radio"] {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      /* Style the radio button labels */
+      .radio-label {
+        display: block;
+        margin-bottom: 12px;
+      }
+
+      /* Style the submit button */
+      input[type="submit"] {
+        background-color: #3e7c6b;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+        margin-top: 2rem;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #357162;
+      }
+
+      /* Style the reset button */
+      input[type="reset"] {
+        background-color: #f3c655;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+        margin-right: 10px;
+        margin-top: 2rem;
+      }
+
+      input[type="reset"]:hover {
+        background-color: #efbb00;
+      }
+
+      /* Style the form header */
+      .form-header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    </style>
+
+    <!-- Font Awesome Files -->
+    <script
+      src="https://kit.fontawesome.com/aed243d69b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--    Bootstrap js files-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <!-- Body Section -->
+
+  <body>
+    <!-- Section 1 : Registration Form -->
+
+    <section id="Register">
+      <div class="Registerdiv">
+        <h1 class="Register-heading"><span>Create your account</span></h1>
+
+        <!-- Registration form -->
+
+        <form action="/account" method="POST" enctype="multipart/form-data">
+          <label for="full-name">Full Name:</label>
+          <input
+            type="text"
+            id="full-name"
+            name="full-name"
+            placeholder="Enter your full name"
+            required
+          />
+          <br />
+
+          <label for="Age">Age:</label>
+          <input
+            type="number"
+            id="Age"
+            name="Age"
+            placeholder="Enter your Age"
+            required
+          />
+          <br />
+
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+          />
+
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            required
+          />
+
+          <label for="district">District</label>
+          <select id="district" name="district" required>
+            <option value="">--Select District--</option>
+            <option value="Ahmednagar">Ahmednagar</option>
+            <option value="Akola">Akola</option>
+            <option value="Amravati">Amravati</option>
+            <option value="Aurangabad">Aurangabad</option>
+            <option value="Bhandara">Bhandara</option>
+            <option value="Buldhana">Buldhana</option>
+            <option value="Chandrapur">Chandrapur</option>
+            <option value="Dhule">Dhule</option>
+            <option value="Gadchiroli">Gadchiroli</option>
+            <option value="Gondia">Gondia</option>
+            <option value="Hingoli">Hingoli</option>
+            <option value="Jalgaon">Jalgaon</option>
+            <option value="Jalna">Jalna</option>
+            <option value="Kolhapur">Kolhapur</option>
+            <option value="Latur">Latur</option>
+            <option value="Mumbai City">Mumbai City</option>
+            <option value="Mumbai Suburban">Mumbai Suburban</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Nanded">Nanded</option>
+            <option value="Nandurbar">Nandurbar</option>
+            <option value="Nashik">Nashik</option>
+            <option value="Osmanabad">Osmanabad</option>
+            <option value="Palghar">Palghar</option>
+            <option value="Parbhani">Parbhani</option>
+            <option value="Pune">Pune</option>
+            <option value="Raigad">Raigad</option>
+            <option value="Ratnagiri">Ratnagiri</option>
+            <option value="Sangli">Sangli</option>
+            <option value="Satara">Satara</option>
+            <option value="Sindhudurg">Sindhudurg</option>
+            <option value="Solapur">Solapur</option>
+            <option value="Thane">Thane</option>
+            <option value="Wardha">Wardha</option>
+            <option value="Washim">Washim</option>
+            <option value="Yavatmal">Yavatmal</option>
+          </select>
+          <br />
+          <br />
+
+          <label for="taluka">Taluka</label>
+          <select id="taluka" name="taluka" required>
+            <option value="">--Select Taluka--</option>
+          </select>
+          <br />
+          <br />
+
+          <label for="Photo">Profile Photo:</label>
+          <input
+            type="file"
+            id="Photo"
+            name="Photo"
+            accept="image/*"
+            required
+          /><br />
+
+          <input type="submit" value="Register" />
+          <input type="reset" value="Reset" />
+        </form>
+      </div>
+    </section>
+
+    <!-- Javascript Functionality-->
+
+    <script>
+      // This add scroll functionality.
+      window.addEventListener("scroll", function () {
+        var navbar = document.querySelector("nav");
+        var scrollPosition = window.pageYOffset;
+
+        if (scrollPosition > 0) {
+          navbar.classList.add("navbar-colored");
+        } else {
+          navbar.classList.remove("navbar-colored");
+        }
+      });
+
+      // This Restrict the taluka to their respective district.
+      // Define an array of talukas by district.
+      const talukasByDistrict = {
+        Akola: ["Akot", "Balapur", "Murtijapur", "Telhara"],
+        Ahmednagar: [
+          "Akola",
+          "Jamkhed",
+          "Karjat",
+          "Kopargaon",
+          "Nagar",
+          "Nevasa",
+          "Parner",
+          "Pathardi",
+          "Rahata",
+          "Shevgaon",
+          "Shrigonda",
+          "Shrirampur",
+        ],
+        Amravati: [
+          "Achalpur",
+          "Bhatkuli",
+          "Chandur Railway",
+          "Chandurbazar",
+          "Daryapur",
+          "Dhamangaon Railway",
+          "Morshi",
+          "Nandgaon-Khandeshwar",
+          "Teosa",
+          "Warud",
+        ],
+        Aurangabad: [
+          "Aurangabad",
+          "Gangapur",
+          "Kannad",
+          "Khuldabad",
+          "Paithan",
+          "Phulambri",
+          "Sillod",
+          "Vaijapur",
+        ],
+        Bhandara: [
+          "Bhandara",
+          "Lakhandur",
+          "Mohadi",
+          "Pauni",
+          "Sakoli",
+          "Tumsar",
+        ],
+        Buldana: [
+          "Buldana",
+          "Chikhli",
+          "Deulgaon Raja",
+          "Jalgaon Jamod",
+          "Khamgaon",
+          "Lonar",
+          "Mehkar",
+          "Motala",
+          "Nandura",
+          "Sangrampur",
+          "Shegaon",
+        ],
+        Chandrapur: [
+          "Ballarpur",
+          "Bhadravati",
+          "Brahmapuri",
+          "Chandrapur",
+          "Chimur",
+          "Gondpipri",
+          "Jiwati",
+          "Korpana",
+          "Mul",
+          "Nagbhir",
+          "Pombhurna",
+          "Rajura",
+          "Sawali",
+          "Warora",
+        ],
+        Dhule: ["Dhule", "Sakri", "Shindkheda", "Shirpur", "Talode"],
+        Gadchiroli: [
+          "Aheri",
+          "Armori",
+          "Dhanora",
+          "Etapalli",
+          "Gadchiroli",
+          "Kurkheda",
+          "Desaiganj (Wadsa)",
+          "Sironcha",
+        ],
+        Gondia: ["Deori", "Gondia", "Goregaon", "Sadak-Arjuni", "Tirora"],
+        Hingoli: [
+          "Aundha Nagnath",
+          "Basmat",
+          "Hingoli",
+          "Kalamnuri",
+          "Sengaon",
+        ],
+        Jalgaon: [
+          "Amalner",
+          "Bhadgaon",
+          "Bhusawal",
+          "Bodwad",
+          "Chalisgaon",
+          "Chopda",
+          "Dharangaon",
+          "Erandol",
+          "Jalgaon",
+          "Jamner",
+          "Muktainagar",
+          "Pachora",
+          "Parola",
+          "Raver",
+          "Yawal",
+        ],
+        Jalna: [
+          "Ambad",
+          "Badnapur",
+          "Bhokardan",
+          "Ghansawangi",
+          "Jafferabad",
+          "Jalna",
+          "Mantha",
+          "Partur",
+        ],
+        Kolhapur: [
+          "Ajara",
+          "Bavda",
+          "Chandgad",
+          "Gadhinglaj",
+          "Hatkanangle",
+          "Karvir",
+          "Panhala",
+          "Radhanagari",
+          "Shahuwadi",
+          "Shirol",
+        ],
+        Latur: [
+          "Ahmadpur",
+          "Ausa",
+          "Chakur",
+          "Deoni",
+          "Jalkot",
+          "Latur",
+          "Nilanga",
+          "Renapur",
+          "Shirur-Anantpal",
+          "Udgir",
+        ],
+
+        Nagpur: [
+          "Hingna",
+          "Kamptee",
+          "Katol",
+          "Nagpur East",
+          "Nagpur South",
+          "Nagpur West",
+          "Umred",
+        ],
+        Nanded: [
+          "Ardhapur",
+          "Bhokar",
+          "Biloli",
+          "Deglur",
+          "Dharmabad",
+          "Hadgaon",
+          "Himayatnagar",
+          "Kandhar",
+          "Kinwat",
+          "Loha",
+          "Mahur",
+          "Mudkhed",
+          "Mukhed",
+          "Nanded North",
+          "Nanded South",
+          "Naigaon (Khairgaon)",
+          "Umri",
+        ],
+        Nandurbar: [
+          "Akkalkuwa",
+          "Akrani",
+          "Nandurbar",
+          "Navapur",
+          "Shahada",
+          "Talode",
+        ],
+        Nashik: [
+          "Baglan",
+          "Chandvad",
+          "Deola",
+          "Dindori",
+          "Igatpuri",
+          "Kalwan",
+          "Malegaon",
+          "Manmad",
+          "Nandgaon",
+          "Nashik East",
+          "Nashik West",
+          "Niphad",
+          "Peint",
+          "Sinnar",
+          "Surgana",
+          "Trimbakeshwar",
+          "Yeola",
+        ],
+        Osmanabad: [
+          "Kalamb",
+          "Lohara",
+          "Omerga",
+          "Osmanabad",
+          "Paranda",
+          "Tuljapur",
+          "Umarga",
+        ],
+        Parbhani: [
+          "Gangakhed",
+          "Jintur",
+          "Manwath",
+          "Parbhani",
+          "Purna",
+          "Sailu",
+          "Sonpeth",
+        ],
+        Pune: [
+          "Ambegaon",
+          "Baramati",
+          "Bhor",
+          "Daund",
+          "Haveli",
+          "Indapur",
+          "Junnar",
+          "Khed",
+          "Maval",
+          "Mulshi",
+          "Pune City",
+          "Purandhar",
+          "Shirur",
+          "Velhe",
+        ],
+        Raigarh: [
+          "Alibag",
+          "Karjat",
+          "Khalapur",
+          "Mahad",
+          "Mangaon",
+          "Mhasla",
+          "Murud",
+          "Panvel",
+          "Pen",
+          "Poladpur",
+          "Roha",
+          "Shrivardhan",
+          "Sudhagad",
+          "Tala",
+          "Uran",
+        ],
+        Ratnagiri: [
+          "Chiplun",
+          "Dapoli",
+          "Guhagar",
+          "Khed",
+          "Lanja",
+          "Mandangad",
+          "Rajapur",
+          "Ratnagiri",
+          "Sangameshwar",
+        ],
+        Sangli: ["Khanapur", "Miraj", "Walwa", "Atpadi"],
+        Satara: [
+          "Jaoli",
+          "Khatav",
+          "Koregaon",
+          "Mahabaleshwar",
+          "Man",
+          "Patan",
+          "Phaltan",
+          "Satara",
+        ],
+        Sindhudurg: [
+          "Devgad",
+          "Dodamarg",
+          "Kankavli",
+          "Kudal",
+          "Malwan",
+          "Sawantwadi",
+          "Vaibhavwadi",
+          "Vengurla",
+        ],
+        Solapur: [
+          "Akkalkot",
+          "Barshi",
+          "Karmala",
+          "Madha",
+          "Malshiras",
+          "Mangalvedhe",
+          "North Solapur",
+          "Pandharpur",
+          "Sangole",
+          "South Solapur",
+        ],
+        Thane: [
+          "Ambarnath",
+          "Bhiwandi",
+          "Dahanu",
+          "Jawhar",
+          "Kalyan",
+          "Murbad",
+          "Palghar",
+          "Shahapur",
+          "Talasari",
+          "Thane",
+          "Ulhasnagar",
+          "Vada",
+          "Vasai",
+          "Vikramgad",
+        ],
+        Wardha: [
+          "Arvi",
+          "Ashti",
+          "Deoli",
+          "Hinganghat",
+          "Karanja",
+          "Samudrapur",
+          "Seloo",
+          "Wardha",
+        ],
+        Washim: ["Karanja", "Malegaon", "Mangrulpir", "Risod", "Washim"],
+        Yavatmal: [
+          "Arni",
+          "Babulgaon",
+          "Darwha",
+          "Digras",
+          "Ghatanji",
+          "Kalamb",
+          "Kelapur",
+          "Mahagaon",
+          "Ner",
+          "Pusad",
+          "Ralegaon",
+          "Umarkhed",
+          "Wani",
+          "Yavatmal",
+        ],
+      };
+
+      // Get references to the district and taluka dropdown lists
+      const districtDropdown = document.getElementById("district");
+      const talukaDropdown = document.getElementById("taluka");
+
+      // Add an event listener to the district dropdown list
+      districtDropdown.addEventListener("change", (event) => {
+        // Get the selected district
+        const selectedDistrict = event.target.value;
+
+        // Clear the taluka dropdown list
+        talukaDropdown.innerHTML =
+          '<option value="">--Select Taluka--</option>';
+
+        // Populate the taluka dropdown list with the talukas for the selected district
+        talukasByDistrict[selectedDistrict].forEach((taluka) => {
+          const option = document.createElement("option");
+          option.value = taluka;
+          option.text = taluka;
+          talukaDropdown.appendChild(option);
+        });
+      });
+    </script>
+  </body>
+</html>

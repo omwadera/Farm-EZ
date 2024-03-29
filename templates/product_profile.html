@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Product Card/Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+
+    <!-- Style -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      body {
+        line-height: 1.5;
+      }
+
+      /* Navbar styles */
+      nav {
+        background: #357162;
+        color: #fff;
+        padding: 2.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 1.2rem; /* Adjust the font size */
+      }
+
+      .navbar-logo {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: bolder;
+      }
+
+      .navbar-logo img {
+        width: 60px; /* Adjust the size of the logo */
+        margin-right: 20px;
+      }
+
+      .navbar-buttons {
+        display: flex; /* Change to flex */
+        align-items: center; /* Vertically center */
+      }
+
+      .navbar-buttons a {
+        margin: 0 15px;
+        font-size: 1.2rem;
+      }
+
+      /* New search button styles */
+      .search-button {
+        border: none;
+        background-color: #fff;
+        color: #357162;
+        padding: 10px 40px;
+        font-size: 1.2rem;
+        font-weight: bold; /* Different bold style */
+        cursor: pointer;
+        margin-left: auto;
+      }
+
+      .search-button:hover {
+        background-color: #f0f0f0;
+      }
+
+      /* Navbar Code End here */
+      .card-wrapper {
+        max-width: 1200px;
+        max-height: 550px;
+        margin: 0 auto;
+        margin-top: 10px;
+      }
+
+      img {
+        width: 100%;
+        display: block;
+      }
+
+      .img-display {
+        overflow: hidden;
+        max-height: 500px; /* Adjust the height as needed */
+      }
+
+      .img-showcase {
+        display: flex;
+        width: 100%;
+        transition: all 0.5s ease;
+      }
+
+      .img-showcase img {
+        min-width: 100%;
+        max-height: 100%; /* Adjust the height as needed */
+      }
+
+      /* Add this CSS */
+      .img-showcase img {
+        transition: transform 0.3s ease; /* Smooth transition */
+      }
+
+      .img-showcase:hover img {
+        transform: scale(1.1); /* Increase size by 5% */
+      }
+
+      .product-title {
+        font-size: 3rem;
+        text-transform: capitalize;
+        font-weight: 700;
+        position: relative;
+        color: #12263a;
+        margin: 1rem 0;
+      }
+
+      .product-title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        width: 80px;
+        background: #12263a;
+      }
+
+      .product-link {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 0.9rem;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        background: #256eff;
+        color: #fff;
+        padding: 0 0.3rem;
+        transition: all 0.5s ease;
+      }
+
+      .product-link:hover {
+        opacity: 0.9;
+      }
+
+      .product-rating {
+        color: #ffc107;
+      }
+
+      .product-rating span {
+        font-weight: 600;
+        color: #252525;
+      }
+
+      .product-price {
+        margin: 1rem 0;
+        font-size: 1.5rem; /* Increase the font size */
+        font-weight: 700;
+      }
+
+      .product-price span {
+        font-weight: 400;
+      }
+
+      .last-price span {
+        color: #f64749;
+        text-decoration: line-through;
+      }
+
+      .new-price span {
+        color: #357162;
+      }
+
+      .product-detail h2 {
+        text-transform: capitalize;
+        color: #12263a;
+        padding-bottom: 0.6rem;
+      }
+
+      .product-detail p {
+        font-size: 0.9rem;
+        padding: 0.3rem;
+        opacity: 0.8;
+      }
+
+      .product-detail ul {
+        margin: 1rem 0;
+        font-size: 0.9rem;
+      }
+
+      .product-detail ul li {
+        margin: 0;
+        list-style: none;
+        background-size: 18px;
+        padding-left: 1.7rem;
+        margin: 0.4rem 0;
+        font-weight: 600;
+        opacity: 0.9;
+      }
+
+      .product-detail ul li span {
+        font-weight: 400;
+      }
+
+      .purchase-info {
+        margin: 1.5rem 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .purchase-info input {
+        border: 1.5px solid #ddd;
+        border-radius: 5px;
+        text-align: center;
+        padding: 0.5rem;
+        outline: 0;
+        margin-right: 1rem;
+        font-size: 1rem;
+        width: 170px;
+      }
+
+      .purchase-info .btn {
+        border: 1.5px solid #357162;
+        border-radius: 5px;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        outline: 0;
+        cursor: pointer;
+        color: #fff;
+        background: #357162;
+        transition: all 0.5s ease;
+      }
+
+      .purchase-info .btn:hover {
+        background: #12263a;
+        border-color: #12263a;
+      }
+
+      .social-links {
+        display: flex;
+        align-items: center;
+      }
+
+      .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        color: #000;
+        border: 1px solid #000;
+        margin: 0 0.2rem;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 0.8rem;
+        transition: all 0.5s ease;
+      }
+
+      .social-links a:hover {
+        background: #357162;
+        border-color: transparent;
+        color: #fff;
+      }
+
+      /* Footer Section */
+
+      #footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 8%;
+        background-color: whitesmoke;
+      }
+
+      .footer-column {
+        flex: 1;
+      }
+
+      .footer-logo {
+        margin-top: 5rem;
+        color: #357162;
+      }
+
+      /* Adjust the size of the logo */
+      .footer-logo span {
+        font-size: 45px;
+        font-weight: bolder;
+      }
+
+      .footer-copyright {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+      }
+
+      .social-media {
+        text-align: center;
+        font-weight: bolder;
+        padding: 5%;
+      }
+
+      .social-media p {
+        margin-top: 3.4rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #357162;
+      }
+
+      .social-icons {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Adjust the size of social icons */
+      .social-icons a {
+        margin: 0 10px;
+        font-size: 40px;
+        color: #357162; /* Add this line to define the color */
+      }
+
+      .newsletter {
+        text-align: center;
+        font-weight: bolder;
+        padding: 5%;
+      }
+
+      .newsletter p {
+        color: #357162;
+        text-align: left;
+        font-size: 2rem;
+        margin-top: 3rem;
+      }
+
+      .newsletter p:hover {
+        color: #28a788;
+        transition: 0.2s;
+      }
+
+      .newsletter-form {
+        text-align: left;
+        font-weight: 500;
+        width: fit-content;
+        margin: auto;
+      }
+
+      .newsletter-form input {
+        border: 0;
+        outline: none;
+        height: 70px;
+        width: 400px;
+        font-size: 16px;
+      }
+
+      .newsletter-form button {
+        border-radius: 1px;
+        border: none;
+        background: #357162;
+        height: 70px;
+        width: 200px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 1rem;
+      }
+
+      .newsletter-form button:hover {
+        background-color: #449b85;
+      }
+
+      /* Product Details Heading */
+      .product-details-heading {
+        font-size: 4rem;
+        font-weight: bold;
+        color: #12263a; /* Dark color */
+        margin-top: 20px; /* Add some space below the heading */
+        margin-bottom: 20px; /* Add some space below the heading */
+        text-align: center; /* Center the heading */
+      }
+
+      @media screen and (min-width: 992px) {
+        .card {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 1.5rem;
+        }
+
+        .card-wrapper {
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .product-imgs {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .product-content {
+          padding-top: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav>
+      <div class="navbar-logo">
+        <span>Farm Ez</span>
+      </div>
+      <div class="navbar-buttons">
+        <a href="#">Home</a>
+        <a href="#">Contact Us</a>
+        <a href="#">About Us</a>
+        <!-- New search button -->
+        <button class="search-button">Search Land!</button>
+      </div>
+    </nav>
+
+    <h2 class="product-details-heading">Product Details</h2>
+
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="product-imgs">
+          <div class="img-display">
+            <div class="img-showcase">
+              <img src="{{ url_for('static', filename='uploads/' + product['crop_image']) }}" alt="{{ product['Product_Name'] }}" width="200" height="200">
+            </div>
+          </div>
+        </div>
+        <div class="product-content">
+          <h2 class="product-title">{{ product['name'] }}</h2>
+          <div class="product-price">
+            <p class="new-price"><strong>Price per 10kg:</strong> Rs{{ product['price_per_10kg'] }}</p>
+          </div>
+          <div class="product-detail">
+            <h2>about this item:</h2>
+            <p>
+              <strong>Description:</strong> {{ product['description'] }}
+            </p>
+          </div>
+          <div class="purchase-info">
+            <input type="number" min="0" value="1" />
+            <a href="/add_to_list">
+              <button type="button" class="btn">
+                  Add to Cart <i class="fas fa-shopping-cart"></i>
+              </button>
+          </a>
+          
+          <a href="/payment">
+              <button type="button" class="btn">
+                  Buy Now! <i class="fas fa-shopping-cart"></i>
+              </button>
+          </a>
+          </div>
+          <div class="social-links">
+            <p>Share At:</p>
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-pinterest"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="footer-column">
+        <div class="footer-logo">
+          <span>Farm Ez</span>
+          <p class="footer-copyright">@2023.Farm Ez. All rights reserved.</p>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <div class="social-media">
+          <p>Social handles</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-reddit"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter Section -->
+      <div class="footer-column">
+        <div class="newsletter">
+          <p>Get our newsletter:</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Crops</title>
+
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+
+        /* Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+        
+        *{
+            
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Poppins' , sans-serif;
+        
+        }
+        
+        html{
+            
+            scroll-behavior: smooth;
+        
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 100px; /* Adjust this value based on your navbar height */
+        }
+
+
+
+       /* Section 1 - header  */
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px 100px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+      /* Farm Ez Logo  */
+
+      .logo
+      {
+        
+        margin-left: 1rem;
+        color: whitesmoke;
+        font-size: 3rem;
+        font-weight: bolder;
+        border-radius: 1rem;
+        cursor: pointer;
+
+      }
+
+      .logo:hover{
+        
+        color:#347464;
+        transition: 0.5s;
+
+      }
+
+
+
+      /* Navigation bar */
+
+      .navbar{ 
+          
+          height:auto;
+          width: 100%;
+          padding : 0 0 4.5rem;
+          
+          position: sticky;
+          top: 0;
+          z-index: 999;
+          
+      }
+        
+
+      .navbar-colored {
+
+        background-color: #3d7b67;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+        transition: background-color 0.5s ease-in-out;
+
+      }
+
+      .nav-item{
+      
+            font-family: 'Poppins' , sans-serif;
+            font-size: 1rem;
+            padding: 1rem;
+            font-weight: bolder;
+          
+      }  
+
+      /* Navbar Ke text ke liye hai  */
+
+
+      .navbar-nav .nav-link {
+            color: #ffffff; /* or use the shorthand notation color: white; */
+            
+      }
+
+
+      .navbar-nav .nav-link:hover{
+        
+        transition: 0.5s;
+        color: #347464;
+      
+
+      }
+
+      .navbar-toggler{
+
+          color:#FFFFFF;
+
+      }
+
+      /* Register button custom button*/
+
+      .custom-btn2{
+
+        background-color:#347464; /* white background */
+        color: #FFFFFF; /* green text color */
+
+        border: none;
+        border-radius: 4px;
+        
+        padding: 5px 10px;
+        
+        font-size: 1.5rem;
+        font-weight: 800;
+        
+        text-transform: uppercase;
+        cursor: pointer;
+
+        letter-spacing: 5px;
+        
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+
+      }
+
+      .custom-btn2:hover {
+
+        background-color: #548c7c; /* green background on hover */
+        color: #FFFFFF; /* white text color on hover */
+
+      }
+
+      .custom-btn2:active {
+
+        background-color: #548c7c; /* darker green background on active */
+        color: #FFFFFF; /* white text color on active */
+
+      }
+
+
+      /* ----Code For Navigation Bar Ends Here----- */        
+
+
+        /* Footer Section :: */
+
+        #footer{
+        
+
+            position: relative;
+            z-index: 2;
+
+            padding: 20px 0;
+            background-color: whitesmoke;
+
+        }
+
+        #Footer .col-lg-4 {
+            padding: 10px; /* Adjust the padding around each column's content */
+        }
+
+      .footer-logo{
+          
+        margin-top: 4rem;
+
+      }
+      
+      .row{
+         
+         background-color: #2f6654;
+   
+
+      }
+
+        /* Copyright logo  */
+
+
+        .copyright-logo{
+
+
+              float:right;
+              margin-right: 5rem;
+
+              color: white;
+              font-size: 3rem;
+              font-weight: bolder;
+              cursor: pointer;
+                  
+
+        }
+        .copyright-logo:hover{
+
+              color: #449b85;
+
+        }
+
+        .Copyright-box{
+            
+            text-align: center;
+            font-weight: bolder;
+            padding   : 5%;
+
+        }
+
+        .Copyright-icon{
+            
+            color: white;
+            margin-bottom: 4rem;
+            margin-left: 5.5rem;
+          
+
+        }
+
+        .Copyright-icon:hover{
+          
+            color: #28a788;
+            transition: 0.2s;
+        
+        }
+
+
+
+
+        /* Social Handles */
+
+
+        .Social-media{
+          
+
+          text-align: center;
+          font-weight: bolder;
+          padding   : 5%;
+
+        }
+
+        .Social-media p{
+          
+          margin-top: 3.4rem;
+
+        }
+
+        .social-icon{  
+          
+          margin-top:2rem; 
+          color: white;
+          margin-bottom: 1rem;
+          padding:10px;
+
+        }
+
+
+        .social-icon:hover{
+          
+            color: #28a788;
+            transition: 0.2s;
+        
+        }
+
+        .Social-media p{
+                
+          color: white;
+          text-align: center;
+          font-size: 2rem;
+          margin-bottom: 3rem;
+
+        }
+
+        .Social-media p:hover{
+
+            color: #28a788;
+            transition: 0.2s;
+
+        }
+
+
+
+        /* Get A Newsletter  */
+
+
+        .Newsletter{
+            
+          text-align: center;
+          font-weight: bolder;
+          padding   : 5%;
+        
+        }
+
+
+        .Newsletter p{
+                
+          color: white;
+          text-align: left;
+          font-size: 2rem;
+          margin-top: 3rem;
+
+        }
+
+        .Newsletter p:hover{
+
+          color: #28a788;
+          transition: 0.2s;
+
+        }
+
+        .Newsletter h6{
+            
+            font-size: 1rem;
+            text-align: left;
+            margin-bottom: 1rem;
+            
+        }
+
+        .footer-form{
+
+            text-align: left;
+            font-weight: 500;
+            width: fit-content;
+
+        }
+
+        .footer-form input{
+
+            border:0;
+            outline: none;
+            height: 70px;
+            width: 400px;
+            font-size: 16px;
+
+        }
+
+
+        .footer-form button{
+
+          border-radius: 1px;
+          border:none;
+          background: #f3d34c;
+          height: 70px;
+          width: 200px;
+          cursor: pointer;
+          margin-top: 4px;
+
+          }
+
+
+          .footer-form button:hover{
+
+          background-color: #449b85;
+
+          }
+
+
+          /* Main Content */
+          .container {
+              max-width: 1200px;
+              margin: 0 auto;
+              margin-bottom: 5rem;
+              margin-top: 1.5rem;
+              padding: 20px;
+          }
+
+          .search-form {
+              margin-bottom: 20px;
+          }
+
+          .crop-listings {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+              justify-content: space-between;
+              margin-top: 20px;
+          }
+
+          .crop-card {
+              border: 1px solid #ccc;
+              padding: 20px;
+              text-align: center;
+              flex: 0 0 calc(33.33% - 20px); /* Three cards in a row with gap */
+              box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+              background-color: #f5f5f5;
+              transition: transform 0.3s, box-shadow 0.3s;
+          }
+
+          .crop-card:hover {
+              transform: translateY(-5px); /* Lift the card on hover */
+              box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+          }
+
+          .crop-card img {
+              max-width: 100%;
+              max-height: 150px;
+              object-fit: contain;
+              margin-bottom: 10px;
+          }
+
+          .crop-card .crop-details {
+              background-color: #347464; /* Background color for crop name, price, and description */
+              color: white; /* Text color for crop details */
+              padding: 10px;
+          }
+
+          .crop-card h5 {
+              font-size: 1.25rem;
+              margin-bottom: 10px;
+          }
+
+          .crop-card p {
+              margin-bottom: 10px;
+          }
+
+          .add-to-list-button {
+              background-color: #3498db;
+              color: white;
+              border: none;
+              padding: 8px 16px;
+              font-size: 14px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+          }
+
+          .add-to-list-button:hover {
+              background-color: #2980b9;
+          }
+
+          /* Adjust the button size */
+          .search-form button,
+          .go-to-list-button button {
+              padding: 8px 20px;
+              font-size: 14px;
+          }
+
+          /* Align the button horizontally with the search input */
+          .search-form form,
+          .go-to-list-button form {
+              display: inline-block;
+              vertical-align: middle;
+          }
+
+          /* Add spacing between input and button */
+          .search-form .input-group-append {
+              margin-left: 10px;
+          }
+
+          /* Adjust the positioning of the shopping list button */
+          .go-to-list-button {
+              text-align: center;
+          }
+
+          /* Ensure proper button alignment on small screens */
+          @media (max-width: 767px) {
+              .search-form {
+                  display: block;
+              }
+
+              .search-form form,
+              .go-to-list-button form {
+                  display: block;
+                  margin: 0 auto;
+              }
+          }
+
+
+          .custom-button button {
+              background-color: #f3d34c; /* Change this to your desired color */
+              color: white;
+              border: none;
+              padding: 8px 16px;
+              font-size: 14px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+          }
+
+          .custom-button button:hover {
+              background-color: #f3d13c; /* Change this to the hover color */
+          }
+
+
+        
+        .feature-heading{
+          
+          text-align: center;
+          padding:  1rem 0;
+          font-size: 3rem;
+          font-weight: 800;
+         
+          
+        
+        }
+        
+        .feature-heading span{
+        
+            
+            background: #357162;
+            color: #ffffff;
+            display: inline-block;
+            padding: 0.5rem 3rem;
+            clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+        
+        }
+        
+        .feature-heading span:hover{
+        
+              background: #548c7c;
+              box-shadow: #111;
+        
+        }
+
+
+
+        .view-green-crop-button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .view-green-crop-button:hover {
+            background-color: #45a049; /* Darker Green */
+            color: white;
+            text-decoration: none;
+        }
+
+
+
+    </style>
+
+    <script src="https://kit.fontawesome.com/aed243d69b.js" crossorigin="anonymous"></script>
+
+    <!--    Bootstrap js files-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+
+</head>
+
+<body>
+
+    <header>
+            
+        <!--Navbar-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-colored">
+             
+             <h4 class = "logo">Farm Ez</h4>
+
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+             </button>
+     
+             <div class="collapse navbar-collapse" id="navbarNav">
+             
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item"><a class="nav-link" href="/">Home</a></li>         
+                  <li class="nav-item"><a class="nav-link" href="/">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+               </ul>
+        
+               <li class="nav-item"><a href="/map"><button class="custom-btn2">Search Land!</button></a></li>
+
+             </div>
+        </nav>
+
+   </header>
+
+
+   <div class="container">
+
+        <h1 class = "feature-heading"> <span>Our Products</span></h1>
+
+        <div class="search-form text-center">
+
+          <form method="post" action="/buy_crops" class="d-inline-block">
+
+              <div class="input-group">
+                  <input type="text" id="crop_name" name="crop_name" class="form-control" placeholder="Search for Crop">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="submit">Search</button>
+                  </div>
+              </div>
+          
+          </form>
+
+          <form action="/shopping_list" method="GET" class="go-to-list-button custom-button">
+            <button type="submit">Go to Shopping Cart </button>
+        </form>
+
+      </div>
+    
+    <!-------------------------------------------------------------------------------------------->
+
+    <div class="crop-listings">
+        {% if crops %}
+            {% for crop in crops %}
+                <div class="crop-card">
+                    <img src="{{ url_for('static', filename='uploads/' + crop['crop_image']) }}" alt="Crop Image">
+                    <h5>{{ crop['name'] }}</h5>
+                    <p>Price per 10kg: {{ crop['price_per_10kg'] }}</p>
+                    <p>{{ crop['description'] }}</p>
+                    <form action="/add_to_list" method="POST">
+                        <input type="hidden" name="product_id" value="{{ crop._id }}">
+                        <button class="add-to-list-button" type="submit">Add to Cart </button>
+                        <a href="{{ url_for('product_detail', product_id=crop._id) }}" class="view-green-crop-button">View Crop  <i class="fa-solid fa-eye"></i></a>
+                    </form>
+                </div>
+            {% endfor %}
+        {% else %}
+            {% for crop in crops_list %}
+                <div class="crop-card">
+                    <img src="{{ url_for('static', filename='uploads/' + crop['crop_image']) }}" alt="Crop Image">
+                    <h5><a href="{{ url_for('product_detail', product_id=crop._id) }}" class="crop-link">{{ crop['name'] }}</a></h5>
+                    <p>Price per 10kg: {{ crop['price_per_10kg'] }}</p>
+                    <p>{{ crop['description'] }}</p>
+                    <form action="/add_to_list" method="POST">
+                        <input type="hidden" name="product_id" value="{{ crop._id }}">
+                        <button class="add-to-list-button" type="submit">Add to List</button>
+                        <a href="#" class="view-green-crop-button">View Crop <i class="fa-solid fa-eye"></i></a>
+                    </form>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    
+    <!-------------------------------------------------------------------------------------------->
+
+    
+
+    <!-- Section 7 :: Footer Section -->
+    <section id="Footer">
+          
+        <div class = "row">
+  
+          
+          <!-- Logo And Copyright Rights -->
+          
+          <div class = "Copyright-box col-lg-4">
+  
+            <div class = "footer-logo">
+  
+              <i class="Copyright-icon fas fa-tractor fa-4x"></i>
+              <h6 class = "copyright-logo">Farm Ez</h6>
+              <p>@2023.Farm Ez. All rights reserved.</p>
+            
+            </div>
+          
+          </div>
+  
+          <div class = "Social-media col-lg-4">
+            
+            <p>Social Handles</p>
+            
+            <div class = "Handles"> 
+  
+              <i  class= "social-icon fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+              <i  class= "social-icon fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+              <i  class= "social-icon fa fa-reddit-square fa-3x" aria-hidden="true"></i>
+              <i  class= "social-icon fa fa-envelope-square fa-3x" aria-hidden="true"></i>
+            
+            </div>
+      
+          </div>
+  
+
+          <div class = "Newsletter col-lg-4">
+            
+            <p>GET A NEWSLETTER!</p>
+            
+            <div class = "News">
+               
+                 <h6>Subscribe To Our Newsletter For Daily Updates.</h6>
+                   
+                 <form class = "footer-form">
+                     <input type = "email" name = "Email" placeholder = "Your email id" required>
+                     <button class = "submit-btn" type="submit" class="btn">Submit</button>
+                  </form>
+
+            </div>
+      
+          </div>
+      
+        </div>
+          
+        </div>
+  
+    </section>     
+
+
+</body>
+
+</html>

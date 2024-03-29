@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head Section -->
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Ez</title>
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Custom Css -->
+    <style>
+
+      /* Google Fonts */
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+      
+      
+      *{
+           
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+           list-style: none;
+           font-family: 'Poppins' , sans-serif;
+      
+      }
+      
+      html{
+        
+           scroll-behavior: smooth;
+           
+      
+      }
+      
+      
+      /* Code Goes Here */
+      
+      /* Section 1 - header  */
+      
+      header
+      {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      
+      /* Farm Ez Logo  */
+      
+      .logo
+      {
+        
+        margin-left: 1rem;
+        color: whitesmoke;
+        font-size: 3rem;
+        font-weight: bolder;
+        border-radius: 1rem;
+        cursor: pointer;
+      
+      }
+      
+      .logo:hover{
+         
+         color:#347464;
+         transition: 0.5s;
+      
+      }
+      
+      
+      
+      /* Navigation bar */
+      
+      .navbar{ 
+           
+           height:auto;
+           width: 100%;
+           padding : 0 0 4.5rem;
+           
+           position: sticky;
+           top: 0;
+           z-index: 999;
+          
+      }
+        
+      
+      .navbar-colored {
+      
+        background-color: #3d7b67;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+        transition: background-color 0.5s ease-in-out;
+      
+      }
+      
+      .nav-item{
+       
+            font-family: 'Poppins' , sans-serif;
+            font-size: 1.5rem;
+            padding: 1rem;
+            font-weight: bolder;
+           
+      }  
+      
+      /* Navbar Ke text ke liye hai  */
+      
+      
+      .navbar-nav .nav-link {
+             color: #ffffff; /* or use the shorthand notation color: white; */
+            
+      }
+      
+      
+      .navbar-nav .nav-link:hover{
+         
+        transition: 0.5s;
+        color: #347464;
+       
+      
+      }
+      
+      .navbar-toggler{
+      
+           color:#FFFFFF;
+      
+      }
+      
+      
+      
+      
+      /* Login Button */
+      
+      .custom-btn {
+      
+        background-color: #FFFFFF; /* white background */
+        color: #347464; /* green text color */
+      
+        border: none;
+        border-radius: 4px;
+        
+        padding: 5px 10px;
+      
+        letter-spacing: 2px;
+        
+        font-size: 1.5rem;
+        font-weight: 800;
+        
+        text-transform: uppercase;
+        cursor: pointer;
+        
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+      
+      }
+      
+      .custom-btn:hover {
+      
+        background-color: #347464; /* green background on hover */
+        color: #FFFFFF; /* white text color on hover */
+      
+      }
+      
+      .custom-btn:active {
+      
+        background-color: #008a3d; /* darker green background on active */
+        color: #FFFFFF; /* white text color on active */
+      
+      }
+      
+      /* Register button custom button*/
+      
+      .custom-btn2{
+      
+        background-color:#347464; /* white background */
+        color: #FFFFFF; /* green text color */
+      
+        border: none;
+        border-radius: 4px;
+        
+        padding: 5px 10px;
+        
+        font-size: 1.5rem;
+        font-weight: 800;
+        
+        text-transform: uppercase;
+        cursor: pointer;
+      
+        letter-spacing: 5px;
+        
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+      
+      }
+      
+      .custom-btn2:hover {
+      
+        background-color: #548c7c; /* green background on hover */
+        color: #FFFFFF; /* white text color on hover */
+      
+      }
+      
+      .custom-btn2:active {
+      
+        background-color: #548c7c; /* darker green background on active */
+        color: #FFFFFF; /* white text color on active */
+        
+      
+      }
+
+      .chat-icon {
+        border: none;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        cursor: pointer;
+      }
+      
+      .chat-icon img {
+        width: 100%;
+        height: auto;
+      }
+
+      /* Drop Down Menu */
+
+.custom-btn2.dropdown-toggle::after {
+  display: none;
+}
+
+.custom-btn1.dropdown-toggle::after {
+  display: none;
+}
+
+
+
+.dropdown-menu {
+  
+  background-color: #347464;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color:#347464;
+
+}
+
+.dropdown-item {
+  
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+
+
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: #548c7c;
+  color: #FFFFFF;
+}
+      
+      /*  Video :: Section - 2  */
+      .showcase {
+    position: relative;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.showcase.active {
+    right: 300px;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.pexels.com/photos/16918656/pexels-photo-16918656/free-photo-of-view-of-a-man-walking-on-a-rice-field.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #748875;
+    mix-blend-mode: overlay;
+}
+
+      
+      
+      /*  Content Text     */
+      
+      .text
+      {
+        text-align: center;   
+        position: relative;
+        width: 90%;
+        margin-top: 3rem;
+        margin: auto;
+        z-index: 10;
+      }
+      
+      
+      .text h1
+      { 
+       
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: 10rem;
+        font-weight: 850;
+        color: #fff;
+        line-height: 1em;
+        text-transform: uppercase;
+      
+      }
+      
+      .text h1:hover{
+            
+            transition: 0.5s;
+            letter-spacing: 2px;
+            
+      
+      }
+      
+      .text h6
+      {
+        
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1em;
+        text-transform: uppercase;
+      
+      
+      }
+      
+      .text p
+      {
+        font-size: 1.1em;
+        color: #fff;
+        margin: 20px 0;
+        font-weight: 400;
+        max-width: 700px;
+      }
+      
+      .text a
+      {
+      
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: 500;
+        background:#357162;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 40px;
+        color: white;
+        letter-spacing: 2px;
+        transition: 0.2s;
+        margin-right: 2rem;
+      
+      }
+      .text a:hover
+      {
+          transition: 0.5s;
+          background-color: #f3d34c;
+      }
+      
+      
+      
+      
+      
+      /* Features Section  :: Section 3  */
+      
+      
+      #features{
+        
+        position: relative;
+        z-index: 2;
+      
+        padding : 5%  10%;
+        background-color: whitesmoke;
+      
+      }
+      
+      /* Our Feature */
+      
+      .feature-heading{
+         
+         text-align: center;
+         padding:  2rem 0;
+         font-size: 3rem;
+         font-weight: 800;
+         margin-bottom: 3rem;
+         
+      
+      }
+      
+      .feature-heading span{
+      
+          
+           background: #357162;
+           color: #ffffff;
+           display: inline-block;
+           padding: 0.5rem 3rem;
+           clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+       
+      }
+      
+      .feature-heading span:hover{
+      
+            background: #548c7c;
+            box-shadow: #111;
+       
+      }
+      
+      
+      .feature-box{
+        
+         text-align: center;
+         font-weight: bolder;
+         padding   : 5%;
+      
+      }
+      
+      
+      .icon{  
+       color: #357162;
+       margin-bottom: 1rem;
+      }
+      
+      .icon:hover{
+        
+          color: #28a788;
+          transition: 0.2s;
+      
+      }
+      
+      .feature-para{
+           
+            margin-top: 1rem;
+      
+      }
+      
+      
+      
+      /*  Section 4  ::  Testimonials */
+      
+      
+      
+      
+      #testimonials{
+            
+            padding: 2% 10%;
+            padding-top: 0;
+            
+            text-align: center;
+            background-color: #659c85;
+          
+      }
+      
+      .testimonial-text{
+           
+            margin:auto;
+            width: 80%;
+      
+            color: whitesmoke;
+            font-size: 2rem;
+            font-family: 'Poppins' , sans-serif;
+            font-weight: 500;      
+      
+      }
+      
+      
+      
+      .testimonials-image{
+            
+            width: 51%;
+            border-radius: 1rem;
+            margin: 40px;
+            margin-bottom: 30px;
+            
+      }
+      
+      .testimonial-para{
+        
+          
+          margin: auto;
+          margin-bottom: 40px;
+          width: 20%;
+          padding: .5rem;
+          background: #357162;
+          color: #ffffff;
+          font-weight: 500;
+      
+          border-radius: 3rem;
+      
+      }
+      
+      .testimonial-para:hover{
+      
+          background: #dfc347;
+      
+      }
+      
+      
+      
+      
+      
+      /*  Section 5 :: About Us  */
+      
+      #about-us {
+        padding: 50px;
+        background-color: whitesmoke;
+        text-align: center;
+      }
+      
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      
+      .column {
+      
+           position: relative;
+           flex: 1;
+           padding: 50px;
+           margin-bottom: 30px;
+        
+      
+      }
+      
+      .about-img {
+        width: 100%;
+        height: auto;
+      }
+      
+      .about-heading{
+      
+        font-size: 2rem;
+        font-weight: bolder;
+        margin-bottom: 1rem;
+        text-align: center;
+      
+      }
+      
+      
+      .about-heading-6{
+         
+        font-weight: bolder;
+        margin-top: 30px;
+      
+      }
+      
+      .about-para{
+          
+           margin-top: 30px;
+           font-size: 1.2rem;
+           text-align: left;
+           font-weight: 600;
+           
+      }
+      
+      
+      
+      
+      /* Section 6 :: Call To Action */
+      
+      #calltoaction{
+          
+      
+          position: relative;
+          z-index: 2;
+          padding : 5%  10%;
+          background-color: #659c85;
+      
+      
+      }
+      
+      .cta-heading{
+          
+          margin: auto;
+          width: 80%;
+          color: whitesmoke;
+          font-size: 2rem;
+          font-family: 'Poppins' , sans-serif;
+          font-weight: bolder;  
+          
+          text-align: center;
+          margin-bottom: 50px;
+      
+      }
+      
+      
+      .cta-button
+      {
+        text-align: center;   
+        position: relative;
+        width: 90%;
+        margin-top: 3rem;
+        margin: auto;
+        z-index: 10;
+      }
+      
+      .cta-button a
+      {
+      
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: 500;
+        background:#357162;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 10px;
+        color: white;
+        letter-spacing: 2px;
+        transition: 0.2s;
+        margin-bottom: 3rem;
+        
+      
+      }
+      .cta-button a:hover
+      {
+          transition: 0.5s;
+          background-color: #f3d34c;
+      }
+      
+      
+      
+      /*  Section 7 :: Footer  */
+      
+       
+      #footer{
+        
+        position: relative;
+        z-index: 2;
+      
+        padding : 5%  10%;
+        background-color: whitesmoke;
+      
+      }
+      
+      
+      /* Copyright logo  */
+      
+      
+      .copyright-logo{
+      
+      
+             float:right;
+             margin-right: 5rem;
+      
+             color: #357162;
+             font-size: 3rem;
+             font-weight: bolder;
+             cursor: pointer;
+                 
+      
+      }
+      .copyright-logo:hover{
+      
+            color: #449b85;
+      
+      }
+      
+      .Copyright-box{
+           
+          text-align: center;
+          font-weight: bolder;
+          padding   : 5%;
+      
+      }
+      
+      .Copyright-icon{
+           
+           color: #357162;
+           margin-bottom: 4rem;
+           margin-left: 5.5rem;
+         
+      
+      }
+      
+      .Copyright-icon:hover{
+         
+           color: #28a788;
+           transition: 0.2s;
+       
+      }
+      
+      
+      
+      
+      /* Social Handles */
+      
+      
+      .Social-media{
+      
+        text-align: center;
+        font-weight: bolder;
+        padding   : 5%;
+      
+      }
+      
+      .social-icon{  
+      
+        color: #357162;
+        margin-bottom: 1rem;
+        padding:10px;
+      
+      }
+      
+      
+      .social-icon:hover{
+         
+          color: #28a788;
+          transition: 0.2s;
+       
+      }
+      
+      .Social-media p{
+              
+              color:#357162;
+              text-align: center;
+              font-size: 2rem;
+              margin-bottom: 3rem;
+      
+      }
+      
+      .Social-media p:hover{
+      
+          color: #28a788;
+          transition: 0.2s;
+      
+      }
+      
+      
+      
+      /* Get A Newsletter  */
+      
+      
+      .Newsletter{
+          
+        text-align: center;
+        font-weight: bolder;
+        padding   : 5%;
+       
+      }
+      
+      
+      .Newsletter p{
+              
+        color:#357162;
+        text-align: left;
+        font-size: 2rem;
+        margin-top: 3rem;
+      
+      }
+      
+      .Newsletter p:hover{
+      
+         color: #28a788;
+         transition: 0.2s;
+      
+      }
+      
+      .Newsletter h6{
+          
+          font-size: 1rem;
+          text-align: left;
+          margin-bottom: 1rem;
+          
+      }
+      
+      
+      form{
+      
+      
+          text-align: left;
+          font-weight: 500;
+          width: fit-content;
+      
+      
+      }
+      
+      form input{
+      
+        border:0;
+        outline: none;
+        height: 70px;
+        width: 400px;
+        font-size: 16px;
+      
+      
+      }
+      
+      
+      form button{
+      
+          border-radius: 1px;
+          border:none;
+          background: #357162;
+          height: 70px;
+          width: 200px;
+          cursor: pointer;
+      
+      }
+      
+      
+      form button:hover{
+      
+          background-color: #449b85;
+      
+      }
+
+      .wrapper {
+        height: 100%;
+        width: 50px;
+        position: relative;
+      }
+      
+      .wrapper .menu-btn {
+        position: absolute;
+        left: 20px;
+        top: -12px;
+        height: 40px;
+        width: 40px;
+       
+        border-radius: 10px;
+        cursor: pointer;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        transition: 0.3s ease;
+        z-index: 999;
+      }
+      
+      .wrapper #btn:checked ~ .menu-btn {
+        left: 247px;
+      }
+      
+      .wrapper .menu-btn i {
+        font-size: 24px;
+        top:-3px;
+        position: absolute;
+        transition: 0.3s ease;
+      }
+      
+      .wrapper .menu-btn i.fa-times {
+        opacity: 0;
+
+      }
+      
+      .wrapper #btn:checked ~ .menu-btn i.fa-times {
+        opacity: 1;
+        transform: rotate(-180deg);
+      }
+      
+      .wrapper #btn:checked ~ .menu-btn i.fa-bars {
+        opacity: 0;
+        transform: rotate(180deg);
+      }
+      
+      .wrapper .sidebar {
+        position: fixed;
+        top: 0;
+        left: -270px;
+        height: 100%;
+        width: 270px;
+        transition: all 0.3s linear;
+      }
+      
+      .wrapper #btn:checked ~ .sidebar {
+        left: 0;
+      }
+      
+      .wrapper .sidebar .title {
+        line-height: 65px;
+        text-align: center;
+        background: #3d7b67;
+        color: #FFFFFF;
+        font-size: 40px;
+        font-weight: 600;
+        border-bottom: 2px solid #222;
+      }
+      
+      .wrapper .sidebar .list-items {
+        position: relative;
+        background: #3d7b67;
+        height: 100%;
+        width: 100%;
+        left:-15px;
+        list-style: none;
+      }
+      
+      .wrapper .sidebar .list-items li {
+        padding-left: 40px;
+        line-height: 50px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid #333;
+        transition: all 0.3s ease;
+      }
+      
+      .wrapper .sidebar .list-items li:hover {
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        box-shadow: 0 0 10px 3px #222;
+      }
+      
+      .wrapper .sidebar .list-items li:first-child {
+        border-top: none;
+      }
+      
+      .wrapper .sidebar .list-items li a {
+        color: #f2f2f2;
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: 500;
+        height: 100%;
+        width: 100%;
+        display: block;
+      }
+      
+      .wrapper .sidebar .list-items li a i {
+        margin-right: 10px;
+      }
+      
+      .wrapper .sidebar .list-items .icons {
+        position: absolute;
+        bottom: 90px;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        display: flex;
+     
+       
+      }
+      
+      .wrapper .sidebar .list-items .icons a {
+        height: 80%;
+        width: 40px;
+        display: block;
+        margin: 0 5px;
+        font-size: 22px;
+        color: #FFFFFF;
+        background: #3d7b67;
+        border-radius: 5px;
+        border: 1px solid #383838;
+        transition: all 0.3s ease;
+      }
+      
+      .wrapper .sidebar .list-items .icons a:hover {
+        background: #404040;
+      }
+      
+      .wrapper .sidebar .list-items .icons a:first-child {
+        margin-left: 0px;
+      }
+  
+
+
+    </style>
+
+
+    
+    <!-- Font Awesome Files -->
+    <script src="https://kit.fontawesome.com/aed243d69b.js" crossorigin="anonymous"></script>
+
+
+    <!--    Bootstrap js files-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+</head>
+
+
+
+<!-- Body Section -->
+
+<body>
+    
+     <!-- Section 1-->
+
+     <header>
+
+      
+
+          <!--Navbar-->
+          <nav class="navbar fixed-top navbar-expand-lg navbar-colored">
+
+            <div class="wrapper">
+              <input type="checkbox" id="btn" hidden />
+              <label for="btn" class="menu-btn">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+              </label>
+              <nav class="sidebar">
+                <div class="title">FarmEz</div>
+        
+                <ul class="list-items">
+
+                  {% if 'farmer_id' in session %}
+                  <li>
+                    <a href="/me/{{ session['farmer_id'] }}"><i class="fas fa-envelope"></i>My Account</a>
+                  </li>
+                  <li>
+                    <a href="/trend"><i class="fas fa-envelope"></i>Crop Trends</a>
+                  </li>
+                  <li>
+                    <a href="/news"><i class="fas fa-bell"></i>news</a>
+                  </li>
+                  <li>
+                    <a href="/contact"><i class="fas fa-phone"></i>Contact Us</a>
+                  </li>
+                  <li>
+                  </li>
+                  <li>
+                    <a href="/about"><i class="fas fa-cog"></i>About Us</a>
+                  </li>
+                  <li>
+                       <a href="/logout"><i class="fas fa-home"></i>Log Out!</a>
+                  </li>
+                  {% else %}
+                  <li>
+                    <a href="/news"><i class="fas fa-bell"></i>news</a>
+                  </li>
+                  <li>
+                    <a href="/contact"><i class="fas fa-phone"></i>Contact Us</a>
+                  </li>
+                  <li>
+                  </li>
+                  <li>
+                    <a href="/about"><i class="fas fa-cog"></i>About Us</a>
+                  </li>
+                  {% endif %}
+        
+                  <div class="icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </ul>
+              </nav>
+            </div>
+               
+               <h4 class = "logo">Farm Ez</h4>
+
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+               </button>
+       
+               <div class="collapse navbar-collapse" id="navbarNav">
+               
+
+                 <ul class="navbar-nav ml-auto">
+                   
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+
+                 </ul>
+          
+
+                 <li class="nav-item">
+                  {% if 'farmer_id' in session %}
+                      <a href="/recommend"><button class="custom-btn">Crop Recommender</button></a>
+                  {% else %}
+                      <a href="/signin"><button class="custom-btn">Login</button></a>
+                  {% endif %}
+                </li>
+         
+
+
+                   <li class="nav-item dropdown">
+
+                     
+
+                    <button class="custom-btn2 dropdown-toggle" type="button" id="tradeDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa-solid fa-handshake"></i> Trade
+                    </button>
+                    
+                    <div class="dropdown-menu" aria-labelledby="tradeDropdownMenu">
+                      <a class="dropdown-item" href="/buy">Buy Crops!</a>
+                      <a class="dropdown-item" href="/sell">Sell your crops</a>
+                    </div>
+                    
+
+                </li>  
+                
+                <li class="nav-item dropdown">
+                    <button class="custom-btn2 dropdown-toggle" type="button" id="languageDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa-solid fa-language"></i> Language
+                    </button>
+                    
+                    <div class="dropdown-menu" aria-labelledby="languageDropdownMenu">
+                      <a class="dropdown-item" href="/">English</a>
+                      <a class="dropdown-item" href="/hi">हिंदी</a>
+                      <a class="dropdown-item" href="/ma">मराठी</a>
+                    </div>
+                
+                </li>
+
+
+            </div>
+
+            
+
+          </nav>
+
+        
+
+    </header>
+     
+
+     <!-- Section 2  -->
+     <!-- Background Section -->
+ 
+     <section id = "video" class="showcase">
+     
+        <div class="background-image"></div>
+         
+          <div class="overlay"></div>
+          
+          <!--  Content -->
+
+          
+          <div class="text">
+            <h1>Farm Ez</h1> 
+            <h6>Growing Quality, Harvesting Trust!</h6>
+            <a href="/map">Search For Land</a>
+            <a href="/crop">Search For Crops</a>
+            <a href="/farmer">Register Your Land</a>
+          </div>
+           
+          <form action="/chatbot" method="GET">
+            <button class="chat-icon">
+              <img src="static/Images/chat-icon.png" alt="Chat Icon">
+            </button>
+          </form>
+     
+      </section>
+
+
+
+
+
+      <!--  Section 3 ::  Features  -->
+
+      <section id="features">
+          
+          <h1 class = "feature-heading"> Our <span>Features</span></h1>
+          
+          
+          <div class = "row">
+               
+            <div class = "feature-box col-lg-4">
+              <i class="icon fas fa-magnifying-glass-location fa-4x"></i>
+              <h3>Quick Search.</h3>
+              <p class = "feature-para">Search Your Desired Location In An Instant.</p>
+            </div>
+              
+            <div class = "feature-box col-lg-4">
+              <i class = "icon fas fa-wheat-awn fa-4x"></i>
+              <h3>Favoured Crops.</h3>
+              <p class = "feature-para">Check Whether Crops are Suitable.</p>
+            </div>  
+              
+            <div class = "feature-box col-lg-4">
+              <i class = "icon fas fa-list-check fa-4x"></i>
+              <h3>Provide Land Info.</h3>
+              <p class = "feature-para">Connect With Others To Find Perfect Land.</p>
+            </div>
+        
+
+          </div>
+
+       </section>   
+       
+
+
+       <!-- Section 4 :: Testimonials -->
+
+
+       <section id = "testimonials">
+
+            
+          <h1 class = "feature-heading"><span>Testimonials</span></h1>
+            
+
+            <div id = "testimonial-carousel" class = "carousel slide" data-ride="false">
+
+
+                  <div class = "carousel-inner">
+                        
+
+                        <div class = "carousel-item active">
+                             
+                             <h2 class="testimonial-text">I Don't Need To Wander Around To Find Workers Just With Few Click I Have People Who Can Help.</h2>
+                                       
+                             <img class="testimonials-image" src="static/carousel/amol.jpg" alt="Review">
+                             <p class = "testimonial-para">  Tukaram </p>
+
+                        </div>
+
+
+
+                        <div class = "carousel-item">
+
+                          <h2 class="testimonial-text">Farm Ez Made it Very Convenient To Grow Network With Other Farm Owner.</h2>
+                                       
+                          <img class="testimonials-image" src="static/carousel/farmer.jpg" alt="Review">
+                          <p class = "testimonial-para">  Sattvik  </p>
+
+                        </div>
+
+
+                        <div class = "carousel-item">
+
+                          <h2 class="testimonial-text">With The Help of Farm Ez I'm Employable Throughout The Year , With An Ease To Find The Work.</h2>
+                                       
+                          <img class="testimonials-image" src="static/carousel/worker.jpg" alt="Review">
+                          <p class = "testimonial-para">  Ramesh  </p>
+
+                        </div>
+
+                  </div>
+
+
+                  <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>      
+                  </a>
+                
+
+                  <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </a>
+                
+
+            </div>
+            
+       </section>
+       
+
+       <!-- Section 5 :: About Us -->
+
+
+       <section id = "about-us">
+
+            
+            <h1 class = "feature-heading"><span>About !</span></h1>
+              
+            
+            <div class="row">
+
+
+              <div class="column">
+              
+                <h3 class = "about-heading">Farm Ez Team</h3>
+                <h6 class = "about-heading-6"> Why We Launched Farm Ez.</h6>
+
+                <p class = "about-para">Farm Ez is An Agro-tech Website with a Vision To Create Awareness in agriculture sector to improvise Farmer Life And Create Employement.</p>
+                <p class = "about-para">We The Team of Four Software Developer Started This Initative with the witnessing first hand effects on agriculture sector.We Wanted a means to Connect People with Free Land with the Worker in need of Work.</p>
+                
+              </div>
+ 
+              <div class="column">
+                <img class = "about-img" src="static/carousel/team.jpg" alt="Team Photo">
+              </div>
+  
+            </div>
+
+       </section>
+
+       <!-- Section 6 :: Register Free -->
+
+       <section id = "calltoaction">
+
+            <div class = "Register">
+                  
+              <h1 class = "feature-heading"><span>Register For Free</span></h1>
+              <h1 class = "cta-heading" > So What Are You Waiting For.</h1>
+              <h1 class = "cta-heading" > "Grow your future today, join our agricultural community"</h1>
+              
+              <div class = "cta-button">
+                   <a href = "/signup">Register!</a>
+              </div>
+            
+            </div>
+
+       </section>
+       
+
+     <!-- Section 7 :: Footer Section -->
+     <section id="Footer">
+             
+        <div class = "row">
+
+          <!-- Logo And Copyright Rights -->
+          
+          <div class = "Copyright-box col-lg-4">
+
+            <div class = "footer-logo">
+
+              <i class="Copyright-icon fas fa-tractor fa-4x"></i>
+              <h6 class = "copyright-logo">Farm Ez</h6>
+              <p>@2023.Farm Ez. All rights reserved.</p>
+            
+            </div>
+
+          </div>
+
+          <div class = "Social-media col-lg-4">
+            
+            <p>Social Handles</p>
+            
+            <div class = "Handles">   
+              <i  class= "social-icon fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+              <i  class= "social-icon fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+              <i  class= "social-icon fa fa-reddit-square fa-3x" aria-hidden="true"></i>
+              <i  class= "social-icon fa fa-envelope-square fa-3x" aria-hidden="true"></i>
+            </div>
+      
+          </div>
+
+          <div class = "Newsletter col-lg-4">
+            
+            <p>GET A NEWSLETTER!</p>
+            
+            <div class = "News">
+               
+                 <h6>Subscribe To Our Newsletter For Daily Updates.</h6>
+                 
+                 <form>
+                     <input type = "email" name = "Email" placeholder = "Your email id" required>
+                     <button class = "submit-btn" type="submit" class="btn">Submit</button>
+                  </form>
+
+            </div>
+      
+          </div>
+
+        </div>
+          
+        </div>
+
+     </section>  
+
+     <script>
+
+            window.addEventListener('scroll', function() {
+              var navbar = document.querySelector('nav');
+              var scrollPosition = window.pageYOffset;
+
+              if (scrollPosition > 0) {
+                navbar.classList.add('navbar-colored');
+              } else {
+                navbar.classList.remove('navbar-colored');
+              }
+            });
+
+     </script>
+
+
+
+</body>
+
+</html>
