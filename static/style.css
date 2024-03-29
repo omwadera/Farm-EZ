@@ -1,0 +1,780 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+
+*{
+     
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     font-family: 'Poppins' , sans-serif;
+
+}
+
+html{
+  
+     scroll-behavior: smooth;
+     
+
+}
+
+
+/* Code Goes Here */
+
+/* Section 1 - header  */
+
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Farm Ez Logo  */
+
+.logo
+{
+  
+  margin-left: 1rem;
+  color: whitesmoke;
+  font-size: 3rem;
+  font-weight: bolder;
+  border-radius: 1rem;
+  cursor: pointer;
+
+}
+
+.logo:hover{
+   
+   color:#347464;
+   transition: 0.5s;
+
+}
+
+
+
+/* Navigation bar */
+
+.navbar{ 
+     
+     height:auto;
+     width: 100%;
+     padding : 0 0 4.5rem;
+     
+     position: sticky;
+     top: 0;
+     z-index: 999;
+    
+}
+  
+
+.navbar-colored {
+
+  background-color: #3d7b67;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.5s ease-in-out;
+
+}
+
+.nav-item{
+ 
+      font-family: 'Poppins' , sans-serif;
+      font-size: 1rem;
+      padding: 1rem;
+      font-weight: bolder;
+     
+}  
+
+/* Navbar Ke text ke liye hai  */
+
+
+.navbar-nav .nav-link {
+       color: #ffffff; /* or use the shorthand notation color: white; */
+      
+}
+
+
+.navbar-nav .nav-link:hover{
+   
+  transition: 0.5s;
+  color: #347464;
+ 
+
+}
+
+.navbar-toggler{
+
+     color:#FFFFFF;
+
+}
+
+
+
+
+/* Login Button */
+
+.custom-btn {
+
+  background-color: #FFFFFF; /* white background */
+  color: #347464; /* green text color */
+
+  border: none;
+  border-radius: 4px;
+  
+  padding: 5px 10px;
+
+  letter-spacing: 2px;
+  
+  font-size: 1.5rem;
+  font-weight: 800;
+  
+  text-transform: uppercase;
+  cursor: pointer;
+  
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+
+}
+
+.custom-btn:hover {
+
+  background-color: #347464; /* green background on hover */
+  color: #FFFFFF; /* white text color on hover */
+
+}
+
+.custom-btn:active {
+
+  background-color: #008a3d; /* darker green background on active */
+  color: #FFFFFF; /* white text color on active */
+
+}
+
+/* Register button custom button*/
+
+.custom-btn2{
+
+  background-color:#347464; /* white background */
+  color: #FFFFFF; /* green text color */
+
+  border: none;
+  border-radius: 4px;
+  
+  padding: 5px 10px;
+  
+  font-size: 1.5rem;
+  font-weight: 800;
+  
+  text-transform: uppercase;
+  cursor: pointer;
+
+  letter-spacing: 5px;
+  
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+
+}
+
+.custom-btn2:hover {
+
+  background-color: #548c7c; /* green background on hover */
+  color: #FFFFFF; /* white text color on hover */
+
+}
+
+.custom-btn2:active {
+
+  background-color: #548c7c; /* darker green background on active */
+  color: #FFFFFF; /* white text color on active */
+  
+
+}
+
+/*  Video :: Section - 2  */
+
+
+.showcase
+{
+  
+  position: relative;
+  right: 0;
+
+  width: 100%;
+  width: 100%;
+  min-height: 100vh;
+  
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+
+}
+
+.showcase.active
+{
+  right: 300px;
+}
+
+.showcase video
+{
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+
+}
+
+
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:#748875;
+  mix-blend-mode: overlay;
+}
+
+
+/*  Content Text     */
+
+.text
+{
+  text-align: center;   
+  position: relative;
+  width: 90%;
+  margin-top: 3rem;
+  margin: auto;
+  z-index: 10;
+}
+
+
+.text h1
+{ 
+ 
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 10rem;
+  font-weight: 850;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+
+}
+
+.text h1:hover{
+      
+      transition: 0.5s;
+      letter-spacing: 2px;
+      
+
+}
+
+.text h6
+{
+  
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+
+
+}
+
+.text p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.text a
+{
+
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background:#357162;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 40px;
+  color: white;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  margin-right: 2rem;
+
+}
+.text a:hover
+{
+    transition: 0.5s;
+    background-color: #f3d34c;
+}
+
+
+
+
+
+/* Features Section  :: Section 3  */
+
+
+#features{
+  
+  position: relative;
+  z-index: 2;
+
+  padding : 5%  10%;
+  background-color: whitesmoke;
+
+}
+
+/* Our Feature */
+
+.feature-heading{
+   
+   text-align: center;
+   padding:  2rem 0;
+   font-size: 3rem;
+   font-weight: 800;
+   margin-bottom: 3rem;
+   
+
+}
+
+.feature-heading span{
+
+    
+     background: #357162;
+     color: #ffffff;
+     display: inline-block;
+     padding: 0.5rem 3rem;
+     clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+ 
+}
+
+.feature-heading span:hover{
+
+      background: #548c7c;
+      box-shadow: #111;
+ 
+}
+
+
+.feature-box{
+  
+   text-align: center;
+   font-weight: bolder;
+   padding   : 5%;
+
+}
+
+
+.icon{  
+ color: #357162;
+ margin-bottom: 1rem;
+}
+
+.icon:hover{
+  
+    color: #28a788;
+    transition: 0.2s;
+
+}
+
+.feature-para{
+     
+      margin-top: 1rem;
+
+}
+
+
+
+/*  Section 4  ::  Testimonials */
+
+
+
+
+#testimonials{
+      
+      padding: 2% 10%;
+      padding-top: 0;
+      
+      text-align: center;
+      background-color: #659c85;
+    
+}
+
+.testimonial-text{
+     
+      margin:auto;
+      width: 80%;
+
+      color: whitesmoke;
+      font-size: 2rem;
+      font-family: 'Poppins' , sans-serif;
+      font-weight: 500;      
+
+}
+
+
+
+.testimonials-image{
+      
+      width: 51%;
+      border-radius: 1rem;
+      margin: 40px;
+      margin-bottom: 30px;
+      
+}
+
+.testimonial-para{
+  
+    
+    margin: auto;
+    margin-bottom: 40px;
+    width: 20%;
+    padding: .5rem;
+    background: #357162;
+    color: #ffffff;
+    font-weight: 500;
+
+    border-radius: 3rem;
+
+}
+
+.testimonial-para:hover{
+
+    background: #dfc347;
+
+}
+
+
+
+
+
+/*  Section 5 :: About Us  */
+
+#about-us {
+  padding: 50px;
+  background-color: whitesmoke;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.column {
+
+     position: relative;
+     flex: 1;
+     padding: 50px;
+     margin-bottom: 30px;
+  
+
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+}
+
+.about-heading{
+
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  text-align: center;
+
+}
+
+
+.about-heading-6{
+   
+  font-weight: bolder;
+  margin-top: 30px;
+
+}
+
+.about-para{
+    
+     margin-top: 30px;
+     font-size: 1.2rem;
+     text-align: left;
+     font-weight: 600;
+     
+}
+
+
+
+
+/* Section 6 :: Call To Action */
+
+#calltoaction{
+    
+
+    position: relative;
+    z-index: 2;
+    padding : 5%  10%;
+    background-color: #659c85;
+
+
+}
+
+.cta-heading{
+    
+    margin: auto;
+    width: 80%;
+    color: whitesmoke;
+    font-size: 2rem;
+    font-family: 'Poppins' , sans-serif;
+    font-weight: bolder;  
+    
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+
+.cta-button
+{
+  text-align: center;   
+  position: relative;
+  width: 90%;
+  margin-top: 3rem;
+  margin: auto;
+  z-index: 10;
+}
+
+.cta-button a
+{
+
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background:#357162;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: white;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  margin-bottom: 3rem;
+  
+
+}
+.cta-button a:hover
+{
+    transition: 0.5s;
+    background-color: #f3d34c;
+}
+
+
+
+/*  Section 7 :: Footer  */
+
+ 
+#footer{
+  
+  position: relative;
+  z-index: 2;
+
+  padding : 5%  10%;
+  background-color: whitesmoke;
+
+}
+
+
+/* Copyright logo  */
+
+
+.copyright-logo{
+
+
+       float:right;
+       margin-right: 5rem;
+
+       color: #357162;
+       font-size: 3rem;
+       font-weight: bolder;
+       cursor: pointer;
+           
+
+}
+.copyright-logo:hover{
+
+      color: #449b85;
+
+}
+
+.Copyright-box{
+     
+    text-align: center;
+    font-weight: bolder;
+    padding   : 5%;
+
+}
+
+.Copyright-icon{
+     
+     color: #357162;
+     margin-bottom: 4rem;
+     margin-left: 5.5rem;
+   
+
+}
+
+.Copyright-icon:hover{
+   
+     color: #28a788;
+     transition: 0.2s;
+ 
+}
+
+
+
+
+/* Social Handles */
+
+
+.Social-media{
+
+  text-align: center;
+  font-weight: bolder;
+  padding   : 5%;
+
+}
+
+.social-icon{  
+
+  color: #357162;
+  margin-bottom: 1rem;
+  padding:10px;
+
+}
+
+
+.social-icon:hover{
+   
+    color: #28a788;
+    transition: 0.2s;
+ 
+}
+
+.Social-media p{
+        
+        color:#357162;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+
+}
+
+.Social-media p:hover{
+
+    color: #28a788;
+    transition: 0.2s;
+
+}
+
+
+
+/* Get A Newsletter  */
+
+
+.Newsletter{
+    
+  text-align: center;
+  font-weight: bolder;
+  padding   : 5%;
+ 
+}
+
+
+.Newsletter p{
+        
+  color:#357162;
+  text-align: left;
+  font-size: 2rem;
+  margin-top: 3rem;
+
+}
+
+.Newsletter p:hover{
+
+   color: #28a788;
+   transition: 0.2s;
+
+}
+
+.Newsletter h6{
+    
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    
+}
+
+
+form{
+
+
+    text-align: left;
+    font-weight: 500;
+    width: fit-content;
+
+
+}
+
+form input{
+
+  border:0;
+  outline: none;
+  height: 70px;
+  width: 400px;
+  font-size: 16px;
+
+
+}
+
+
+form button{
+
+    border-radius: 1px;
+    border:none;
+    background: #357162;
+    height: 70px;
+    width: 200px;
+    cursor: pointer;
+
+}
+
+
+form button:hover{
+
+    background-color: #449b85;
+
+}

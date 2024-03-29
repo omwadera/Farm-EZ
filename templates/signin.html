@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+
+    <style>
+      /* Google Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+      }
+
+     /* https://images.pexels.com/photos/2131784/pexels-photo-2131784.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 */
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../static/Images/bali\ farmer.jpg");
+        background-position: center;
+        background-size: cover;
+        position: relative;
+      }
+
+      .underline {
+        position: relative;
+      }
+
+      .underline::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        top: 3.2rem;
+        bottom: 0;
+        left: 0;
+        background-color: #357162;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .underline:hover::after {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+
+      .form-box {
+        width: 90%;
+        max-width: 450px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #548c7c;
+        padding: 50px 60px 70px;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      .form-box h1 {
+        font-weight: 800;
+        font-size: 2.1rem;
+        margin-bottom: 60px;
+        color: seashell;
+        position: relative;
+      }
+
+      .icon {
+        color: black;
+      }
+
+      .icon:hover {
+        color: #28a788;
+        transition: 0.2s;
+      }
+
+      .input-field {
+        background: white;
+        margin: 15px 0;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        max-height: 65px;
+        transition: max-height 0.5s;
+        overflow: hidden;
+      }
+
+      input {
+        width: 100%;
+        background: transparent;
+        border: 0;
+        outline: 0;
+        padding: 18px 15px;
+      }
+
+      .input-field i {
+        margin-left: 15px;
+        color: black;
+      }
+
+      form p {
+        text-align: left;
+        font-size: 13px;
+      }
+
+      form p a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .btn-field {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .btn-field button {
+        font-weight: 900;
+        flex-basis: 50%;
+        background: white;
+        color: black;
+        height: 45px;
+        border-radius: 20px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        transition: background 1s;
+        margin-left: 2.5rem;
+      }
+
+      .btn-field button:hover {
+        background-color: #14ae87;
+        transition: 0.2s;
+      }
+
+      .input-group {
+        height: 180px;
+      }
+    </style>
+
+    <!-- Font Awesome Files -->
+    <script
+      src="https://kit.fontawesome.com/aed243d69b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <h1 id="title"><span class="underline">Sign in</span>!</h1>
+
+        <form method="post" action="/login">
+
+          <div class="input-group">
+
+            <div class="input-field">
+              <i class="icon fa-solid fa-envelope"></i>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email id"
+                required
+              />
+            </div>
+
+            <div class="input-field">
+              <i class="icon fa-solid fa-lock"></i>
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+
+            <p>Forgot Password? <a href="#">Click Here!</a></p>
+
+          </div>
+
+          <div class="btn-field">
+            <button type="submit" id="signupBtn">Login!</button>
+          </div>
+
+        </form>
+
+        <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+      </div>
+    </div>
+    
+  </body>
+</html>

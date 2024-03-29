@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head Section -->
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Ez</title>
+
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Custom Css -->
+    <style>
+
+      /* Google Fonts */
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+      
+      
+      *{
+           
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+           list-style: none;
+           font-family: 'Poppins' , sans-serif;
+      
+      }
+      
+      html{
+        
+           scroll-behavior: smooth;
+           
+      
+      }
+      
+      
+      /* Code Goes Here */
+      
+      /* Section 1 - header  */
+      
+      header
+      {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      
+      /* Farm Ez Logo  */
+      
+      .logo
+      {
+        
+        margin-left: 1rem;
+        color: whitesmoke;
+        font-size: 3rem;
+        font-weight: bolder;
+        border-radius: 1rem;
+        cursor: pointer;
+      
+      }
+      
+      .logo:hover{
+         
+         color:#347464;
+         transition: 0.5s;
+      
+      }
+      
+      
+      
+      /* Navigation bar */
+      
+      .navbar{ 
+           
+           height:auto;
+           width: 100%;
+           padding : 0 0 4.5rem;
+           
+           position: sticky;
+           top: 0;
+           z-index: 999;
+          
+      }
+        
+      
+      .navbar-colored {
+      
+        background-color: #3d7b67;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+        transition: background-color 0.5s ease-in-out;
+      
+      }
+      
+      .nav-item{
+       
+            font-family: 'Poppins' , sans-serif;
+            font-size: 1rem;
+            padding: 1rem;
+            font-weight: bolder;
+           
+      }  
+      
+      /* Navbar Ke text ke liye hai  */
+      
+      
+      .navbar-nav .nav-link {
+             color: #ffffff; /* or use the shorthand notation color: white; */
+            
+      }
+      
+      
+      .navbar-nav .nav-link:hover{
+         
+        transition: 0.5s;
+        color: #347464;
+       
+      
+      }
+      
+      .navbar-toggler{
+      
+           color:#FFFFFF;
+      
+      }
+      
+      
+      
+      
+      /* Login Button */
+      
+      .custom-btn {
+      
+        background-color: #FFFFFF; /* white background */
+        color: #347464; /* green text color */
+      
+        border: none;
+        border-radius: 4px;
+        
+        padding: 5px 10px;
+      
+        letter-spacing: 2px;
+        
+        font-size: 1.5rem;
+        font-weight: 800;
+        
+        text-transform: uppercase;
+        cursor: pointer;
+        
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+      
+      }
+      
+      .custom-btn:hover {
+      
+        background-color: #347464; /* green background on hover */
+        color: #FFFFFF; /* white text color on hover */
+      
+      }
+      
+      .custom-btn:active {
+      
+        background-color: #008a3d; /* darker green background on active */
+        color: #FFFFFF; /* white text color on active */
+      
+      }
+      
+      /* Register button custom button*/
+      
+      .custom-btn2{
+      
+        background-color:#347464; /* white background */
+        color: #FFFFFF; /* green text color */
+      
+        border: none;
+        border-radius: 4px;
+        
+        padding: 5px 10px;
+        
+        font-size: 1.5rem;
+        font-weight: 800;
+        
+        text-transform: uppercase;
+        cursor: pointer;
+      
+        letter-spacing: 5px;
+        
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+      
+      }
+      
+      .custom-btn2:hover {
+      
+        background-color: #548c7c; /* green background on hover */
+        color: #FFFFFF; /* white text color on hover */
+      
+      }
+      
+      .custom-btn2:active {
+      
+        background-color: #548c7c; /* darker green background on active */
+        color: #FFFFFF; /* white text color on active */
+        
+      
+      }
+      
+      /*  Video :: Section - 2  */
+      
+      
+      .showcase
+      {
+        
+        position: relative;
+        right: 0;
+      
+        width: 100%;
+        width: 100%;
+        min-height: 100vh;
+        
+        padding: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #111;
+        transition: 0.5s;
+        z-index: 2;
+      
+      }
+      
+      .showcase.active
+      {
+        right: 300px;
+      }
+      
+      .showcase video
+      {
+      
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.7;
+      
+      }
+      
+      
+      .overlay
+      {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:#748875;
+        mix-blend-mode: overlay;
+      }
+      
+      
+      /*  Content Text     */
+      
+      .text
+      {
+        text-align: center;   
+        position: relative;
+        width: 90%;
+        margin-top: 3rem;
+        margin: auto;
+        z-index: 10;
+      }
+      
+      
+      .text h1
+      { 
+       
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: 10rem;
+        font-weight: 850;
+        color: #fff;
+        line-height: 1em;
+        text-transform: uppercase;
+      
+      }
+      
+      .text h1:hover{
+            
+            transition: 0.5s;
+            letter-spacing: 2px;
+            
+      
+      }
+      
+      .text h6
+      {
+        
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1em;
+        text-transform: uppercase;
+      
+      
+      }
+      
+      .text p
+      {
+        font-size: 1.1em;
+        color: #fff;
+        margin: 20px 0;
+        font-weight: 400;
+        max-width: 700px;
+      }
+      
+      .text a
+      {
+      
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: 500;
+        background:#357162;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 40px;
+        color: white;
+        letter-spacing: 2px;
+        transition: 0.2s;
+        margin-right: 2rem;
+      
+      }
+      .text a:hover
+      {
+          transition: 0.5s;
+          background-color: #f3d34c;
+      }
+      
+      
+      
+      
+      
+      /* Features Section  :: Section 3  */
+      
+      
+      #features{
+        
+        position: relative;
+        z-index: 2;
+      
+        padding : 5%  10%;
+        background-color: whitesmoke;
+      
+      }
+      
+      /* Our Feature */
+      
+      .feature-heading{
+         
+         text-align: center;
+         padding:  2rem 0;
+         font-size: 3rem;
+         font-weight: 800;
+         margin-bottom: 3rem;
+         
+      
+      }
+      
+      .feature-heading span{
+      
+          
+           background: #357162;
+           color: #ffffff;
+           display: inline-block;
+           padding: 0.5rem 3rem;
+           clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+       
+      }
+      
+      .feature-heading span:hover{
+      
+            background: #548c7c;
+            box-shadow: #111;
+       
+      }
+      
+      
+      .feature-box{
+        
+         text-align: center;
+         font-weight: bolder;
+         padding   : 5%;
+      
+      }
+      
+      
+      .icon{  
+       color: #357162;
+       margin-bottom: 1rem;
+      }
+      
+      .icon:hover{
+        
+          color: #28a788;
+          transition: 0.2s;
+      
+      }
+      
+      .feature-para{
+           
+            margin-top: 1rem;
+      
+      }
+      
+      
+      
+      /*  Section 4  ::  Testimonials */
+      
+      
+      
+      
+      #testimonials{
+            
+            padding: 2% 10%;
+            padding-top: 0;
+            
+            text-align: center;
+            background-color: #659c85;
+          
+      }
+      
+      .testimonial-text{
+           
+            margin:auto;
+            width: 80%;
+      
+            color: whitesmoke;
+            font-size: 2rem;
+            font-family: 'Poppins' , sans-serif;
+            font-weight: 500;      
+      
+      }
+      
+      
+      
+      .testimonials-image{
+            
+            width: 51%;
+            border-radius: 1rem;
+            margin: 40px;
+            margin-bottom: 30px;
+            
+      }
+      
+      .testimonial-para{
+        
+          
+          margin: auto;
+          margin-bottom: 40px;
+          width: 20%;
+          padding: .5rem;
+          background: #357162;
+          color: #ffffff;
+          font-weight: 500;
+      
+          border-radius: 3rem;
+      
+      }
+      
+      .testimonial-para:hover{
+      
+          background: #dfc347;
+      
+      }
+      
+      
+      
+      
+      
+      /*  Section 5 :: About Us  */
+      
+      #about-us {
+        padding: 50px;
+        background-color: whitesmoke;
+        text-align: center;
+      }
+      
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      
+      .column {
+      
+           position: relative;
+           flex: 1;
+           padding: 50px;
+           margin-bottom: 30px;
+        
+      
+      }
+      
+      .about-img {
+        width: 100%;
+        height: auto;
+      }
+      
+      .about-heading{
+      
+        font-size: 2rem;
+        font-weight: bolder;
+        margin-bottom: 1rem;
+        text-align: center;
+      
+      }
+      
+      
+      .about-heading-6{
+         
+        font-weight: bolder;
+        margin-top: 30px;
+      
+      }
+      
+      .about-para{
+          
+           margin-top: 30px;
+           font-size: 1.2rem;
+           text-align: left;
+           font-weight: 600;
+           
+      }
+      
+      
+      
+      
+      /* Section 6 :: Call To Action */
+      
+      #calltoaction{
+          
+      
+          position: relative;
+          z-index: 2;
+          padding : 5%  10%;
+          background-color: #659c85;
+      
+      
+      }
+      
+      .cta-heading{
+          
+          margin: auto;
+          width: 80%;
+          color: whitesmoke;
+          font-size: 2rem;
+          font-family: 'Poppins' , sans-serif;
+          font-weight: bolder;  
+          
+          text-align: center;
+          margin-bottom: 50px;
+      
+      }
+      
+      
+      .cta-button
+      {
+        text-align: center;   
+        position: relative;
+        width: 90%;
+        margin-top: 3rem;
+        margin: auto;
+        z-index: 10;
+      }
+      
+      .cta-button a
+      {
+      
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: 500;
+        background:#357162;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 10px;
+        color: white;
+        letter-spacing: 2px;
+        transition: 0.2s;
+        margin-bottom: 3rem;
+        
+      
+      }
+      .cta-button a:hover
+      {
+          transition: 0.5s;
+          background-color: #f3d34c;
+      }
+      
+      
+      
+      /*  Section 7 :: Footer  */
+      
+       
+      #footer{
+        
+        position: relative;
+        z-index: 2;
+      
+        padding : 5%  10%;
+        background-color: whitesmoke;
+      
+      }
+      
+      
+      /* Copyright logo  */
+      
+      
+      .copyright-logo{
+      
+      
+             float:right;
+             margin-right: 5rem;
+      
+             color: #357162;
+             font-size: 3rem;
+             font-weight: bolder;
+             cursor: pointer;
+                 
+      
+      }
+      .copyright-logo:hover{
+      
+            color: #449b85;
+      
+      }
+      
+      .Copyright-box{
+           
+          text-align: center;
+          font-weight: bolder;
+          padding   : 5%;
+      
+      }
+      
+      .Copyright-icon{
+           
+           color: #357162;
+           margin-bottom: 4rem;
+           margin-left: 5.5rem;
+         
+      
+      }
+      
+      .Copyright-icon:hover{
+         
+           color: #28a788;
+           transition: 0.2s;
+       
+      }
+      
+      
+      
+      
+      /* Social Handles */
+      
+      
+      .Social-media{
+      
+        text-align: center;
+        font-weight: bolder;
+        padding   : 5%;
+      
+      }
+      
+      .social-icon{  
+      
+        color: #357162;
+        margin-bottom: 1rem;
+        padding:10px;
+      
+      }
+      
+      
+      .social-icon:hover{
+         
+          color: #28a788;
+          transition: 0.2s;
+       
+      }
+      
+      .Social-media p{
+              
+              color:#357162;
+              text-align: center;
+              font-size: 2rem;
+              margin-bottom: 3rem;
+      
+      }
+      
+      .Social-media p:hover{
+      
+          color: #28a788;
+          transition: 0.2s;
+      
+      }
+      
+      
+      
+      /* Get A Newsletter  */
+      
+      
+      .Newsletter{
+          
+        text-align: center;
+        font-weight: bolder;
+        padding   : 5%;
+       
+      }
+      
+      
+      .Newsletter p{
+              
+        color:#357162;
+        text-align: left;
+        font-size: 2rem;
+        margin-top: 3rem;
+      
+      }
+      
+      .Newsletter p:hover{
+      
+         color: #28a788;
+         transition: 0.2s;
+      
+      }
+      
+      .Newsletter h6{
+          
+          font-size: 1rem;
+          text-align: left;
+          margin-bottom: 1rem;
+          
+      }
+      
+      
+      form{
+      
+      
+          text-align: left;
+          font-weight: 500;
+          width: fit-content;
+      
+      
+      }
+      
+      form input{
+      
+        border:0;
+        outline: none;
+        height: 70px;
+        width: 400px;
+        font-size: 16px;
+      
+      
+      }
+      
+      
+      form button{
+      
+          border-radius: 1px;
+          border:none;
+          background: #357162;
+          height: 70px;
+          width: 200px;
+          cursor: pointer;
+      
+      }
+      
+      
+      form button:hover{
+      
+          background-color: #449b85;
+      
+      }
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+    
+    <!-- Font Awesome Files -->
+    <script src="https://kit.fontawesome.com/aed243d69b.js" crossorigin="anonymous"></script>
+
+
+    <!--    Bootstrap js files-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+</head>
+
+
+
+<!-- Body Section -->
+
+<body>
+    
+     <!-- Section 1-->
+
+     <header>
+            
+      <!--Navbar-->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-colored">
+           
+           <h4 class = "logo">Farm Ez</h4>
+
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+   
+           <div class="collapse navbar-collapse" id="navbarNav">
+           
+             <ul class="navbar-nav ml-auto">
+               
+                <li class="nav-item"><a class="nav-link" href="/hi">होमे </a></li>
+               
+                <li class="nav-item"><a class="nav-link" href="/hiabout">हमारे बारे में</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/hicontact">संपर्क करें</a></li>
+
+             </ul>
+      
+
+             <li class="nav-item"><a href="/hifarmer"><button class="custom-btn2">जमीन दर्ज करे!</button></a></li>
+            
+             <li class="nav-item dropdown">
+
+                <button class="custom-btn2 dropdown-toggle" type="button" id="languageDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa-solid fa-language"></i> Language
+                </button>
+
+                <div class="dropdown-menu" aria-labelledby="languageDropdownMenu">
+                  <a class="dropdown-item" href="/">English</a>
+                  <a class="dropdown-item" href="/hi">हिंदी</a>
+                  <a class="dropdown-item" href="/ma">मराठी</a>
+                </div>
+
+              </li>   
+
+
+
+           </div>
+
+      </nav>
+
+  </header>
+     
+
+
+
+
+
+     <!-- Section 2  -->
+     <!-- Video -->
+ 
+     <section id = "video" class="showcase">
+     
+          <video autoplay loop muted plays-inline class = "back-video">
+                 <source src = "static/stock video/fantower.mp4" type = "video/mp4">
+          </video>
+         
+          <div class="overlay"></div>
+          
+          <!--  Content -->
+
+          
+          <div class="text">
+            <h1>Farm Ez</h1> 
+            <h6>गुणवत्ता उगाना, विश्वास प्राप्त करना!</h6>
+            <a href="/himap">जमीन की तलाश करें</a>
+            <a href="/hicrop">फसलों के लिए खोजें</a>
+          </div>
+
+         
+     
+      </section>
+
+
+
+
+
+      <!--  Section 3 ::  Features  -->
+
+      <section id="features">
+          
+          <h1 class = "feature-heading"> हमारा <span>विशेषताएँ</span></h1>
+          
+          
+          <div class = "row">
+               
+            <div class = "feature-box col-lg-4">
+              <i class="icon fas fa-magnifying-glass-location fa-4x"></i>
+              <h3>त्वरित खोज।</h3>
+              <p class = "feature-para">एक पल में अपना वांछित स्थान खोजें।</p>
+            </div>
+              
+            <div class = "feature-box col-lg-4">
+              <i class = "icon fas fa-wheat-awn fa-4x"></i>
+              <h3>पसंदीदा फसलें।</h3>
+              <p class = "feature-para">जांचें कि फसलें उपयुक्त हैं या नहीं।</p>
+            </div>  
+              
+            <div class = "feature-box col-lg-4">
+              <i class = "icon fas fa-list-check fa-4x"></i>
+              <h3>जमीन की जानकारी दें।</h3>
+              <p class = "feature-para">उत्तम भूमि खोजने के लिए दूसरों से जुड़ें।</p>
+            </div>
+        
+
+          </div>
+
+       </section>   
+       
+
+
+       <!-- Section 4 :: Testimonials -->
+
+
+       <section id = "testimonials">
+
+            
+          <h1 class = "feature-heading"><span>प्रशंसापत्र</span></h1>
+            
+
+            <div id = "testimonial-carousel" class = "carousel slide" data-ride="false">
+
+
+                  <div class = "carousel-inner">
+                        
+
+                        <div class = "carousel-item active">
+                             
+                             <h2 class="testimonial-text">मुझे कामगारों को खोजने के लिए इधर-उधर भटकने की जरूरत नहीं है बस कुछ ही क्लिक के साथ मेरे पास ऐसे लोग हैं जो मदद कर सकते हैं।</h2>
+                                       
+                             <img class="testimonials-image" src="static/carousel/amol.jpg" alt="Review">
+                             <p class = "testimonial-para">  तुकाराम</p>
+
+                        </div>
+
+
+
+                        <div class = "carousel-item">
+
+                          <h2 class="testimonial-text">Farm Ez ने अन्य फार्म मालिकों के साथ नेटवर्क विकसित करना बहुत सुविधाजनक बना दिया है।</h2>
+                                       
+                          <img class="testimonials-image" src="static/carousel/farmer.jpg" alt="Review">
+                          <p class = "testimonial-para">  सात्विक </p>
+
+                        </div>
+
+
+                        <div class = "carousel-item">
+
+                          <h2 class="testimonial-text">Farm Ez की मदद से मैं साल भर काम पर लगा रहता हूँ, आसानी से काम ढूंढ लेता हूँ।</h2>
+                                       
+                          <img class="testimonials-image" src="static/carousel/worker.jpg" alt="Review">
+                          <p class = "testimonial-para">  रमेश  </p>
+
+                        </div>
+
+                  </div>
+
+
+                  <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>      
+                  </a>
+                
+
+                  <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </a>
+                
+
+            </div>
+            
+       </section>
+       
+
+       <!-- Section 5 :: About Us -->
+
+
+       <section id = "about-us">
+
+            
+            <h1 class = "feature-heading"><span>हमारे बारे में!</span></h1>
+              
+            
+            <div class="row">
+
+
+              <div class="column">
+              
+                <h3 class = "about-heading">Farm Ez टीम</h3>
+                <h6 class = "about-heading-6"> हमने क्यों लॉन्च किया Farm Ez.</h6>
+
+                <p class = "about-para">Farm Ez किसान जीवन में सुधार लाने और रोजगार सृजित करने के लिए कृषि क्षेत्र में जागरूकता पैदा करने के विजन के साथ एक एग्रो-टेक वेबसाइट है।</p>
+                <p class = "about-para">हम चार सॉफ्टवेयर डेवलपर की टीम ने कृषि क्षेत्र पर प्रत्यक्ष प्रभाव के साथ इस पहल की शुरुआत की। हम काम की जरूरत वाले श्रमिकों के साथ मुफ्त भूमि वाले लोगों को जोड़ने का एक साधन चाहते थे।</p>
+                
+              </div>
+ 
+
+              <div class="column">
+                <img class = "about-img" src="static/carousel/team.jpg" alt="Team Photo">
+              </div>
+ 
+ 
+            </div>
+ 
+
+       </section>
+
+
+
+       <!-- Section 6 :: Register Free -->
+
+
+       <section id = "calltoaction">
+
+           
+          
+            <div class = "Register">
+                  
+
+              <h1 class = "feature-heading"><span>मुफ्त में पंजीकरण करें</span></h1>
+              <h1 class = "cta-heading" > तो आप किस बात की प्रतीक्षा कर रहे हैं.</h1>
+              <h1 class = "cta-heading" > "आज ही अपना भविष्य संवारें, हमारे कृषि समुदाय से जुड़ें"</h1>
+              
+              <div class = "cta-button">
+                   
+                   <a href = "/hisignup">पंजीकरण करवाना!</a>
+
+              </div>
+              
+
+            </div>
+
+
+       </section>
+       
+
+    <!-- Section 7 :: Footer Section -->
+
+
+    <section id="Footer">
+          
+        
+      <div class = "row">
+
+        
+        <!-- Logo And Copyright Rights -->
+        
+        <div class = "Copyright-box col-lg-4">
+
+          <div class = "footer-logo">
+
+            <i class="Copyright-icon fas fa-tractor fa-4x"></i>
+            <h6 class = "copyright-logo">Farm Ez</h6>
+            <p>@2023.Farm Ez. All rights reserved.</p>
+          
+          </div>
+
+        
+        </div>
+
+
+
+        <div class = "Social-media col-lg-4">
+          
+          <p>नेत्वोर्क </p>
+          
+          <div class = "Handles"> 
+
+            
+            <i  class= "social-icon fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+            <i  class= "social-icon fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+            <i  class= "social-icon fa fa-reddit-square fa-3x" aria-hidden="true"></i>
+            <i  class= "social-icon fa fa-envelope-square fa-3x" aria-hidden="true"></i>
+          
+
+          </div>
+    
+
+        </div>
+
+
+
+        <div class = "Newsletter col-lg-4">
+          
+          <p>एक समाचार पत्र प्राप्त करें!</p>
+          
+          <div class = "News">
+             
+               <h6>दैनिक अपडेट के लिए हमारे न्यूज़लेटर की सदस्यता लें।</h6>
+               
+
+               <form>
+                   <input type = "email" name = "Email" placeholder = "आपकी ईमेल आई.डी" required>
+                   <button class = "submit-btn" type="submit" class="btn">जमा करना</button>
+                </form>
+
+
+          </div>
+    
+
+        </div>
+
+        
+      </div>
+        
+
+ </section>  
+     <script>
+
+            window.addEventListener('scroll', function() {
+              var navbar = document.querySelector('nav');
+              var scrollPosition = window.pageYOffset;
+
+              if (scrollPosition > 0) {
+                navbar.classList.add('navbar-colored');
+              } else {
+                navbar.classList.remove('navbar-colored');
+              }
+            });
+
+     </script>
+
+
+
+</body>
+
+</html>

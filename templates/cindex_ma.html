@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head Section -->
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>उग्र पीक</title>
+
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+    <!-- Custom Css -->
+    <style>
+              
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+    *{
+        
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: 'Poppins' , sans-serif;
+
+    }
+
+    /* Code Goes Here */
+
+    /* Section 1 - header  */
+
+    header
+    {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 40px 100px;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+    /* Farm Ez Logo  */
+
+    .logo
+    {
+      
+      margin-left: 1rem;
+      color: whitesmoke;
+      font-size: 3rem;
+      font-weight: bolder;
+      border-radius: 1rem;
+      cursor: pointer;
+
+    }
+
+    .logo:hover{
+      
+      color:#347464;
+      transition: 0.5s;
+
+    }
+
+
+
+    /* Navigation bar */
+
+    .navbar{ 
+        
+        height:auto;
+        width: 100%;
+        padding : 0 0 4.5rem;
+        
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        
+    }
+      
+
+    .navbar-colored {
+
+      background-color: #3d7b67;
+      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+      transition: background-color 0.5s ease-in-out;
+
+    }
+
+    .nav-item{
+    
+          font-family: 'Poppins' , sans-serif;
+          font-size: 1rem;
+          padding: 1rem;
+          font-weight: bolder;
+        
+    }  
+
+    /* Navbar Ke text ke liye hai  */
+
+
+    .navbar-nav .nav-link {
+          color: #ffffff; /* or use the shorthand notation color: white; */
+          
+    }
+
+
+    .navbar-nav .nav-link:hover{
+      
+      transition: 0.5s;
+      color: #347464;
+    
+
+    }
+
+    .navbar-toggler{
+
+        color:#FFFFFF;
+
+    }
+
+    /* Register button custom button*/
+
+    .custom-btn2{
+
+      background-color:#347464; /* white background */
+      color: #FFFFFF; /* green text color */
+
+      border: none;
+      border-radius: 4px;
+      
+      padding: 5px 10px;
+      
+      font-size: 1.5rem;
+      font-weight: 800;
+      
+      text-transform: uppercase;
+      cursor: pointer;
+
+      letter-spacing: 5px;
+      
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+
+    }
+
+    .custom-btn2:hover {
+
+      background-color: #548c7c; /* green background on hover */
+      color: #FFFFFF; /* white text color on hover */
+
+    }
+
+    .custom-btn2:active {
+
+      background-color: #548c7c; /* darker green background on active */
+      color: #FFFFFF; /* white text color on active */
+
+    }
+
+    /*---- Code For Navigation Bar Ends Here------*/
+
+
+    /*  Quicksearch */
+
+    #quicksearch{
+        
+        position: relative;
+        z-index: 2;
+        padding : 5%  10%;
+        background-color: #659c85;
+
+    }
+
+    .quicksearch-heading{
+      
+        text-align: center;
+        padding:  2rem 0;
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+        
+    }
+    
+    .quicksearch-heading span{
+    
+        
+          background: #357162;
+          color: #ffffff;
+          display: inline-block;
+          padding: 0.5rem 3rem;
+          clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+      
+    }
+    
+    .quicksearch-heading span:hover{
+    
+          background: #548c7c;
+          box-shadow: #111;
+      
+    }
+
+
+    /* Button 1*/
+
+    .quicksearch-button
+    {
+
+      text-align: center;   
+      position: relative;
+      width: 100%;
+      margin-top: 3rem;
+      z-index: 10;
+
+
+    }
+
+    /* District Button Code For Css */
+
+    .quicksearch-button a
+    {
+
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: 500;
+      background:#357162;
+      padding: 10px 30px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 10px;
+      color: white;
+      letter-spacing: 2px;
+      transition: 0.2s;
+      margin-bottom: 3rem;
+      outline: none;
+      border-color: black;
+      box-shadow: 0 0 5px black;
+      
+
+    }
+    .quicksearch-button a:hover
+    {
+        transition: 0.5s;
+        background-color: #287f69;
+    }
+
+
+    /* District Select List And Taluka */
+
+    .district-select{
+
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #357162;
+      
+    }
+     
+    /* Form Section */
+
+    form {
+      width: 50%;
+      margin: auto;
+      color: black;
+      font-weight: 500;
+      margin-bottom: 5rem;
+    }
+
+    
+    /* District Button */
+    .btn-label {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-label:hover {
+      background-color: #347464;
+    }
+
+    select#district {
+      display: inline-block;
+      width: 23rem;
+      padding: 15px;
+      margin-bottom: 3rem;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      border: none;
+      background-color: #f2f2f2;
+      cursor: pointer;
+    }
+
+    select#district:hover {
+      background-color: #e6e6e6;
+    }
+
+
+    /* For Five Crops */
+
+    .crop-btn-label {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 15px 20px;
+      background-color: #007bff;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .crop-btn-label:hover {
+      background-color: #347464;
+    }
+
+
+    select#crop {
+      display: inline-block;
+      width: 26rem;
+      padding: 15px;
+      margin-bottom: 3rem;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      border: none;
+      background-color: #f2f2f2;
+      cursor: pointer;
+    }
+
+    select#crop:hover {
+      background-color: #e6e6e6;
+    }
+
+    /* Style the form inputs */
+    input[type=text] {
+      width: 60%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+    }
+
+    label[for="district"], label[for^="crop"] {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #548c7c;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+      margin-bottom: 16px;
+    }
+
+    label[for="district"] {
+      margin-bottom: 8px;
+    }
+
+    input[type=submit] {
+      background-color: #548c7c;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+      margin-top: 6px;
+    }
+
+    input[type=submit]:hover {
+      background-color: #649484;
+    }
+
+
+
+
+
+
+
+
+    /    /* Result Section  */
+    
+    /* Style for the container */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    /* Style for the results section */
+    .results {
+      margin-top: 50px;
+      padding: 2rem;
+      background-color: #f5f5f5;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    
+    /* Style for the results header */
+    .results h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #1f594b;
+    }
+    
+    /* Style for the results list */
+    .results ul {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: left;
+      list-style-type: disc;
+      margin-left: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .results li {
+      font-size: 2.25rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+      color: #183f35;
+    }
+    
+    /* Style for the recommended crop text */
+    .recommended-crop {
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: left;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      color: #1f594b;
+    }
+    
+    /* Style for the top 5 crops text */
+    .top-5-crops {
+      font-size: 4rem;
+      font-weight: bold;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      color: #1f594b;
+      border-bottom: 3px solid #1f594b;
+      padding-bottom: 20px;
+    }
+    
+    .top-5-crops p {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 20px;
+      color: #183f35;
+    }
+    
+    /* Style for the top 5 crops list */
+    .top-5-crops ul {
+      list-style-type: none;
+      margin-left: 20px;
+      margin-right: 20px;
+      text-align: left;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #1f594b;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    
+    
+    .top-5-crops li {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 17px;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+      color: #183f35;
+      position: relative;
+      padding-left: 35px;
+    }
+    
+    .top-5-crops li:before {
+      content: "•";
+      color: #1f594b;
+      font-size: 4rem;
+      position: absolute;
+      left: 0;
+      top: -8px;
+    }
+    
+    .top-5-crops ul {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .top-5-crops li {
+      color: #1f594b;
+    }    
+      
+
+  /* Style for the best districts section */
+  .best-districts table {
+    width: 75%; 
+    border-collapse: seperate;
+    border-spacing: 0;
+    margin-left: 5.5rem;
+
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Style for the best districts table headers */
+.best-districts th {
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #3d7b67;
+    border: 4px solid #3d7b67;
+    color: #FFFFFF;
+}
+
+/* Style for the best districts table cells */
+.best-districts td {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1.5rem;
+    border: 2px solid #3d7b67;
+    color: #2e564b;
+    background-color: #f2f2f2;
+}
+  
+  
+/* Style for the plot images */
+
+.plot {
+  margin-top: 40px;
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+.bar-chart-para {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: #1f594b;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+
+  /* Footer Section :: */
+
+  #footer{
+        
+    position: relative;
+    z-index: 2;
+
+    padding : 2%  8%;
+    background-color: whitesmoke;
+
+  }
+
+  .footer-logo{
+      
+    margin-top: 4rem;
+
+  }
+
+
+    /* Copyright logo  */
+
+
+    .copyright-logo{
+
+
+          float:right;
+          margin-right: 5rem;
+
+          color: #357162;
+          font-size: 3rem;
+          font-weight: bolder;
+          cursor: pointer;
+              
+
+    }
+    .copyright-logo:hover{
+
+          color: #449b85;
+
+    }
+
+    .Copyright-box{
+        
+        text-align: center;
+        font-weight: bolder;
+        padding   : 5%;
+
+    }
+
+    .Copyright-icon{
+        
+        color: #357162;
+        margin-bottom: 4rem;
+        margin-left: 5.5rem;
+      
+
+    }
+
+    .Copyright-icon:hover{
+      
+        color: #28a788;
+        transition: 0.2s;
+    
+    }
+
+
+
+
+    /* Social Handles */
+
+
+    .Social-media{
+      
+
+      text-align: center;
+      font-weight: bolder;
+      padding   : 5%;
+
+    }
+
+    .Social-media p{
+      
+      margin-top: 3.4rem;
+
+    }
+
+    .social-icon{  
+      
+      margin-top:2rem; 
+      color: #357162;
+      margin-bottom: 1rem;
+      padding:10px;
+
+    }
+
+
+    .social-icon:hover{
+      
+        color: #28a788;
+        transition: 0.2s;
+    
+    }
+
+    .Social-media p{
+            
+            color:#357162;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+
+    }
+
+    .Social-media p:hover{
+
+        color: #28a788;
+        transition: 0.2s;
+
+    }
+
+
+
+    /* Get A Newsletter  */
+
+
+    .Newsletter{
+        
+      text-align: center;
+      font-weight: bolder;
+      padding   : 5%;
+    
+    }
+
+
+    .Newsletter p{
+            
+      color:#357162;
+      text-align: left;
+      font-size: 2rem;
+      margin-top: 3rem;
+
+    }
+
+    .Newsletter p:hover{
+
+      color: #28a788;
+      transition: 0.2s;
+
+    }
+
+    .Newsletter h6{
+        
+        font-size: 1rem;
+        text-align: left;
+        margin-bottom: 1rem;
+        
+    }
+
+    .footer-form{
+
+
+    text-align: left;
+    font-weight: 500;
+    width: fit-content;
+
+
+    }
+
+    .footer-form input{
+
+    border:0;
+    outline: none;
+    height: 70px;
+    width: 400px;
+    font-size: 16px;
+   
+
+
+    }
+
+
+    .footer-form button{
+
+      border-radius: 1px;
+      border:none;
+      background: #357162;
+      height: 70px;
+      width: 200px;
+      cursor: pointer;
+
+      }
+
+
+      .footer-form button:hover{
+
+      background-color: #449b85;
+
+      }
+
+
+  </style>
+    
+
+    <!-- Custom CSS Files -->
+    <link rel = "stylesheet" type = "text/css" href = "workerstyle.css">
+
+
+    <!-- Font Awesome Files -->
+    <script src="https://kit.fontawesome.com/aed243d69b.js" crossorigin="anonymous"></script>
+
+
+    <!--    Bootstrap js files-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<!-- Body Section -->
+
+<body>
+    
+
+    <!-- Section 1-->
+
+    <header>
+            
+      <!--Navbar-->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-colored">
+           
+           <h4 class = "logo">Farm Ez</h4>
+
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+   
+           <div class="collapse navbar-collapse" id="navbarNav">
+           
+             <ul class="navbar-nav ml-auto">
+               
+                <li class="nav-item"><a class="nav-link" href="/ma">मुख्यपृष्ठ </a></li>
+               
+                <li class="nav-item"><a class="nav-link" href="/maabout">आमच्याबद्दल</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/macontact">संपर्क करा</a></li>
+
+             </ul>
+      
+
+             <li class="nav-item"><a href="/macrop"><button class="custom-btn2">पिके शोधा!</button></a></li>
+
+
+           </div>
+
+      </nav>
+
+  </header>
+    
+
+  
+    <!-- Section 2 : QuickSearch -->
+
+    <section id = "quicksearch">
+
+            <div class = "QuicksearchButtonsdiv">      
+
+              <h1 class = "quicksearch-heading"><span>पीक उत्पादन अंदाज</span></h1>
+             
+              <div class = "quicksearch-button">
+                     
+    
+                <form action="/machart" method="post">
+                
+                  <label for="district" class="btn-label">जिल्हा निवडा</label>
+                  <select id="district" name="district" required class="btn-select">
+                    <option value="">--जिल्हा निवडा--</option>
+                    <option value="Ahmednagar">अहमदनगर</option>
+                    <option value="Akola">अकोला</option>
+                    <option value="Amravati">अमरावती</option>
+                    <option value="Aurangabad">औरंगाबाद</option>
+                    <option value="Bhandara">भंडारा</option>
+                    <option value="Buldhana">बुलढाना</option>
+                    <option value="Chandrapur">चंद्रपुर</option>
+                    <option value="Dhule">धुले</option>
+                    <option value="Gadchiroli">गडचिरोली</option>
+                    <option value="Gondia">गोंदिया</option>
+                    <option value="Hingoli">हिंगोली</option>
+                    <option value="Jalgaon">जलगांव</option>
+                    <option value="Jalna">जलना</option>
+                    <option value="Kolhapur">कोल्हापुर</option>
+                    <option value="Latur">लातूर</option>
+                    <option value="Nagpur">नागपुर</option>
+                    <option value="Nanded">नांदेड़</option>
+                    <option value="Nandurbar">नंदुरबार</option>
+                    <option value="Nashik">नासिक</option>
+                    <option value="Osmanabad">उस्मानाबाद</option>
+                    <option value="Palghar">पल्घर</option>
+                    <option value="Parbhani">परभनी</option>
+                    <option value="Pune">पुणे</option>
+                    <option value="Raigad">रायगढ़</option>
+                    <option value="Ratnagiri">रत्नागिरि</option>
+                    <option value="Sangli">सांगली</option>
+                    <option value="Satara">सतारा</option>
+                    <option value="Sindhudurg">सिंधुदुर्ग</option>
+                    <option value="Solapur">सोलापुर</option>
+                    <option value="Thane">थाने</option>
+                    <option value="Wardha">वर्धा</option>
+                    <option value="Washim">वाशिम</option>
+                    <option value="Yavatmal">यवतमाल</option>
+                  </select>
+
+
+                  <label for="crop1" class="crop-btn-label">पीक १ :</label>
+                  <select id="crop" name="crop1" required>
+                      <option value="">--पीक निवडा--</option>
+                      <option value="RICE">तांदूळ</option>
+                      <option value="WHEAT">गहू</option>
+                      <option value="KHARIP_JOWAR">खरीप ज्वारी</option>
+                      <option value="RABBI_JOWAR">रुबी भरती</option>
+                      <option value="BAJRA">बाजरी</option>
+                      <option value="MAIZE">मका</option>
+                      <option value="WARI">वरी</option>
+                      <option value="RAGI">रागी</option>
+                      <option value="RALA">राळा</option>
+                      <option value="SAWA">सवा</option>
+                      <option value="BHADALI">भाडली</option>
+                      <option value="GRAM">हरभरा</option>
+                      <option value="TUR">तूर</option>
+                      <option value="MUNG">मूग</option>
+                      <option value="UDID">औद</option>
+                      <option value="KULITH">कुलिथ</option>
+                      <option value="MATH">माही</option>
+                      <option value="BEANS">फलियाँ</option>
+                      <option value="PEAS">वाटाणा</option>
+                      <option value="SUGARCANE">ऊस</option>
+                      <option value="CHILLI">मिरची</option>
+                      <option value="GARLIC">लसूण</option>
+                      <option value="MANGO">आंबा</option>
+                      <option value="GRAPES">द्राक्ष</option>
+                      <option value="CITRUS">चकोतरा</option>
+                      <option value="BANANA">केळी</option>
+                      <option value="POTATOS">बटाटा</option>
+                      <option value="ONIONS">कांदा</option>
+                      <option value="BRINJALS">वांगे</option>
+                      <option value="TOMATOES">टमाटर</option>
+                      <option value="COTTON">कापूस</option>
+                      <option value="GROUNDNUTS">भुईमूग</option>
+                      <option value="SUNFLOWER">सूर्यफूल</option>
+                      <option value="SAFFLOWER_AR_UNDR_CROP">कुसुम</option>
+                      <option value="SOYABEAN">सोयाबीन</option>
+                  </select>
+
+
+
+                  <label for="crop2" class="crop-btn-label">पीक 2:</label>
+                  <select id="crop" name="crop2" required>
+                    <option value="">--पीक निवडा--</option>
+                    <option value="RICE">तांदूळ</option>
+                    <option value="WHEAT">गहू</option>
+                    <option value="KHARIP_JOWAR">खरीप ज्वारी</option>
+                    <option value="RABBI_JOWAR">रुबी भरती</option>
+                    <option value="BAJRA">बाजरी</option>
+                    <option value="MAIZE">मका</option>
+                    <option value="WARI">वरी</option>
+                    <option value="RAGI">रागी</option>
+                    <option value="RALA">राळा</option>
+                    <option value="SAWA">सवा</option>
+                    <option value="BHADALI">भाडली</option>
+                    <option value="GRAM">हरभरा</option>
+                    <option value="TUR">तूर</option>
+                    <option value="MUNG">मूग</option>
+                    <option value="UDID">औद</option>
+                    <option value="KULITH">कुलिथ</option>
+                    <option value="MATH">माही</option>
+                    <option value="BEANS">फलियाँ</option>
+                    <option value="PEAS">वाटाणा</option>
+                    <option value="SUGARCANE">ऊस</option>
+                    <option value="CHILLI">मिरची</option>
+                    <option value="GARLIC">लसूण</option>
+                    <option value="MANGO">आंबा</option>
+                    <option value="GRAPES">द्राक्ष</option>
+                    <option value="CITRUS">चकोतरा</option>
+                    <option value="BANANA">केळी</option>
+                    <option value="POTATOS">बटाटा</option>
+                    <option value="ONIONS">कांदा</option>
+                    <option value="BRINJALS">वांगे</option>
+                    <option value="TOMATOES">टमाटर</option>
+                    <option value="COTTON">कापूस</option>
+                    <option value="GROUNDNUTS">भुईमूग</option>
+                    <option value="SUNFLOWER">सूर्यफूल</option>
+                    <option value="SAFFLOWER_AR_UNDR_CROP">कुसुम</option>
+                    <option value="SOYABEAN">सोयाबीन</option>
+                </select>
+
+                  <label for="crop3" class="crop-btn-label">पीक 3 :</label>
+                  <select id="crop" name="crop3" required>
+                    <option value="">--पीक निवडा--</option>
+                    <option value="RICE">तांदूळ</option>
+                    <option value="WHEAT">गहू</option>
+                    <option value="KHARIP_JOWAR">खरीप ज्वारी</option>
+                    <option value="RABBI_JOWAR">रुबी भरती</option>
+                    <option value="BAJRA">बाजरी</option>
+                    <option value="MAIZE">मका</option>
+                    <option value="WARI">वरी</option>
+                    <option value="RAGI">रागी</option>
+                    <option value="RALA">राळा</option>
+                    <option value="SAWA">सवा</option>
+                    <option value="BHADALI">भाडली</option>
+                    <option value="GRAM">हरभरा</option>
+                    <option value="TUR">तूर</option>
+                    <option value="MUNG">मूग</option>
+                    <option value="UDID">औद</option>
+                    <option value="KULITH">कुलिथ</option>
+                    <option value="MATH">माही</option>
+                    <option value="BEANS">फलियाँ</option>
+                    <option value="PEAS">वाटाणा</option>
+                    <option value="SUGARCANE">ऊस</option>
+                    <option value="CHILLI">मिरची</option>
+                    <option value="GARLIC">लसूण</option>
+                    <option value="MANGO">आंबा</option>
+                    <option value="GRAPES">द्राक्ष</option>
+                    <option value="CITRUS">चकोतरा</option>
+                    <option value="BANANA">केळी</option>
+                    <option value="POTATOS">बटाटा</option>
+                    <option value="ONIONS">कांदा</option>
+                    <option value="BRINJALS">वांगे</option>
+                    <option value="TOMATOES">टमाटर</option>
+                    <option value="COTTON">कापूस</option>
+                    <option value="GROUNDNUTS">भुईमूग</option>
+                    <option value="SUNFLOWER">सूर्यफूल</option>
+                    <option value="SAFFLOWER_AR_UNDR_CROP">कुसुम</option>
+                    <option value="SOYABEAN">सोयाबीन</option>
+                </select>
+
+
+                  <label for="crop4" class="crop-btn-label">पीक ४ :</label>
+                  <select id="crop" name="crop4" required>
+                    <option value="">--पीक निवडा--</option>
+                    <option value="RICE">तांदूळ</option>
+                    <option value="WHEAT">गहू</option>
+                    <option value="KHARIP_JOWAR">खरीप ज्वारी</option>
+                    <option value="RABBI_JOWAR">रुबी भरती</option>
+                    <option value="BAJRA">बाजरी</option>
+                    <option value="MAIZE">मका</option>
+                    <option value="WARI">वरी</option>
+                    <option value="RAGI">रागी</option>
+                    <option value="RALA">राळा</option>
+                    <option value="SAWA">सवा</option>
+                    <option value="BHADALI">भाडली</option>
+                    <option value="GRAM">हरभरा</option>
+                    <option value="TUR">तूर</option>
+                    <option value="MUNG">मूग</option>
+                    <option value="UDID">औद</option>
+                    <option value="KULITH">कुलिथ</option>
+                    <option value="MATH">माही</option>
+                    <option value="BEANS">फलियाँ</option>
+                    <option value="PEAS">वाटाणा</option>
+                    <option value="SUGARCANE">ऊस</option>
+                    <option value="CHILLI">मिरची</option>
+                    <option value="GARLIC">लसूण</option>
+                    <option value="MANGO">आंबा</option>
+                    <option value="GRAPES">द्राक्ष</option>
+                    <option value="CITRUS">चकोतरा</option>
+                    <option value="BANANA">केळी</option>
+                    <option value="POTATOS">बटाटा</option>
+                    <option value="ONIONS">कांदा</option>
+                    <option value="BRINJALS">वांगे</option>
+                    <option value="TOMATOES">टमाटर</option>
+                    <option value="COTTON">कापूस</option>
+                    <option value="GROUNDNUTS">भुईमूग</option>
+                    <option value="SUNFLOWER">सूर्यफूल</option>
+                    <option value="SAFFLOWER_AR_UNDR_CROP">कुसुम</option>
+                    <option value="SOYABEAN">सोयाबीन</option>
+                </select>
+                  
+                  <label for="crop5" class="crop-btn-label">पीक ५:</label>
+                  <select id="crop" name="crop5" required>
+                    <option value="">--पीक निवडा--</option>
+                    <option value="RICE">तांदूळ</option>
+                    <option value="WHEAT">गहू</option>
+                    <option value="KHARIP_JOWAR">खरीप ज्वारी</option>
+                    <option value="RABBI_JOWAR">रुबी भरती</option>
+                    <option value="BAJRA">बाजरी</option>
+                    <option value="MAIZE">मका</option>
+                    <option value="WARI">वरी</option>
+                    <option value="RAGI">रागी</option>
+                    <option value="RALA">राळा</option>
+                    <option value="SAWA">सवा</option>
+                    <option value="BHADALI">भाडली</option>
+                    <option value="GRAM">हरभरा</option>
+                    <option value="TUR">तूर</option>
+                    <option value="MUNG">मूग</option>
+                    <option value="UDID">औद</option>
+                    <option value="KULITH">कुलिथ</option>
+                    <option value="MATH">माही</option>
+                    <option value="BEANS">फलियाँ</option>
+                    <option value="PEAS">वाटाणा</option>
+                    <option value="SUGARCANE">ऊस</option>
+                    <option value="CHILLI">मिरची</option>
+                    <option value="GARLIC">लसूण</option>
+                    <option value="MANGO">आंबा</option>
+                    <option value="GRAPES">द्राक्ष</option>
+                    <option value="CITRUS">चकोतरा</option>
+                    <option value="BANANA">केळी</option>
+                    <option value="POTATOS">बटाटा</option>
+                    <option value="ONIONS">कांदा</option>
+                    <option value="BRINJALS">वांगे</option>
+                    <option value="TOMATOES">टमाटर</option>
+                    <option value="COTTON">कापूस</option>
+                    <option value="GROUNDNUTS">भुईमूग</option>
+                    <option value="SUNFLOWER">सूर्यफूल</option>
+                    <option value="SAFFLOWER_AR_UNDR_CROP">कुसुम</option>
+                    <option value="SOYABEAN">सोयाबीन</option>
+                </select>
+                  <input type="submit" value="प्रस्तुत करणे">
+                  <br><br>
+                
+                </form>
+                  
+               </div>
+
+            </div> 
+ 
+
+            <div class="container">
+
+              {% if crops %}
+              <div class="results">
+
+                <h1 class = "quicksearch-heading"><span>निकाल!</span></h1>
+                
+                <p>निवडलेल्या जिल्ह्यात खालील पिके घेतली जातात.</p>
+                <ul>
+                  {% for crop, status in crops %}
+                  <li>{{ crop }} : {{ status }}</li>
+                  {% endfor %}
+                </ul>
+                
+                
+                
+              </div>
+
+              <div class="recommended">
+                <h1 class = "quicksearch-heading"><span>जास्तीत जास्त उत्पादनासाठी शिफारस केलेले पीक: <strong>{{ max_crop }}</strong>.</span></h1>
+              </div>
+              
+
+              <div class="top-5-crops">
+                  
+                <h1 class = "quicksearch-heading"><span>या प्रदेशात घेतलेली शीर्ष ५ पिके आहेत:</span></h1>
+
+                  <ul>
+                    {% for crop in top_5 %}
+                    <li>{{ crop }}</li>
+                    {% endfor %}
+                  </ul>
+
+               </div>
+              
+              
+               <div class="best-districts">
+                 
+                  <h1 class = "quicksearch-heading"><span>ही निवडलेली पिके घेण्यासाठी सर्वोत्तम जिल्हे आहेत:</span></h1>
+
+                  <table>
+
+                    <thead>
+                      <tr>
+                        <th>पीक</th>
+                        <th>शीर्ष 3 जिल्हे</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      {% for crop, districts in top_districts %}
+                      <tr>
+                        <td>{{ crop }}</td>
+                        <td>
+                          <ul>
+                            {% for district in districts %}
+                            <li>{{ district }}</li>
+                            {% endfor %}
+                          </ul>
+                        </td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+
+                  </table>
+                
+               </div>
+               
+            </div> 
+         
+
+            <h1 class = "quicksearch-heading"><span>बार आलेख!</span></h1>
+              
+            <div class="plot">
+                <img src="{{ url_for('static', filename='chart1.png') }}" alt="Bar Chart">
+            </div>
+            
+            <p class = "bar-chart-para">हा बार आलेख जिल्ह्यातील पाच पिकांचे उत्पादन दाखवतो. हे प्रत्येक पिकाच्या एकूण उत्पादनाचे विहंगावलोकन प्रदान करते, सर्वात जास्त आणि सर्वात कमी उत्पादन देणारी पिके ओळखण्यात मदत करते. जिल्ह्यातील शेतीचा कल समजून घेण्यासाठी आणि शेती आणि पीक व्यवस्थापनाबाबत माहितीपूर्ण निर्णय घेण्यासाठी ही माहिती मोलाची ठरू शकते.</p>
+           
+             
+
+            <h1 class = "quicksearch-heading"><span>पाई चार्ट!</span></h1>
+            
+            <div class="plot">
+                <img src="{{ url_for('static', filename='chart2.png') }}" alt="Pie Chart">
+            </div> 
+            
+            <p class = "bar-chart-para">हा पाई चार्ट महाराष्ट्रातील एका जिल्ह्यातील विविध पिकांच्या उत्पादनाचे गुणोत्तर दाखवतो. जिल्ह्य़ाच्या कृषी क्षेत्राला त्यांच्या सापेक्ष महत्त्वाची माहिती देताना उच्च आणि कमी उत्पादन वाटा असलेली पिके ओळखण्यात मदत होते</p>
+           
+            {% endif %}
+            
+
+            <section id="Footer">
+          
+        
+              <div class = "row">
+        
+                
+                <!-- Logo And Copyright Rights -->
+                
+                <div class = "Copyright-box col-lg-4">
+        
+                  <div class = "footer-logo">
+        
+                    <i class="Copyright-icon fas fa-tractor fa-4x"></i>
+                    <h6 class = "copyright-logo">Farm Ez</h6>
+                    <p>@2023.Farm Ez. All rights reserved.</p>
+                  
+                  </div>
+        
+                
+                </div>
+        
+        
+        
+                <div class = "Social-media col-lg-4">
+                  
+                  <p>नेटवर्क </p>
+                  
+                  <div class = "Handles"> 
+        
+                    
+                    <i  class= "social-icon fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+                    <i  class= "social-icon fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+                    <i  class= "social-icon fa fa-reddit-square fa-3x" aria-hidden="true"></i>
+                    <i  class= "social-icon fa fa-envelope-square fa-3x" aria-hidden="true"></i>
+                  
+        
+                  </div>
+            
+        
+                </div>
+        
+        
+        
+                <div class = "Newsletter col-lg-4">
+                  
+                  <p>एक वृत्तपत्र मिळवा!</p>
+                  
+                  <div class = "News">
+                     
+                       <h6>दैनिक अद्यतनांसाठी आमच्या वृत्तपत्राची सदस्यता घ्या.</h6>
+                       
+        
+                       <form>
+                           <input type = "email" name = "Email" placeholder = "आपकी ईमेल आई.डी" required>
+                           <button class = "submit-btn" type="submit" class="btn">प्रस्तुत करणे</button>
+                        </form>
+        
+        
+                  </div>
+            
+        
+                </div>
+        
+                
+              </div>
+                
+        
+         </section> 
+
+
+
+
+<!-- Javascript Functionality-->
+<script>
+
+  // This add scroll functionality.
+  window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('nav');
+    var scrollPosition = window.pageYOffset;
+  
+    if (scrollPosition > 0) {
+      navbar.classList.add('navbar-colored');
+    } else {
+      navbar.classList.remove('navbar-colored');
+    }
+  });
+                
+ // Define the crop options
+ var cropOptions = [  "Bajra",  "Banana",  "Beans",  "Bhadali",  "Brinjals",  "Chilli",  "Citrus",  "Cotton",  "Garlic",  "Gram",  "Groundnuts",  "Kharip_Jowar",  "Kulith",  "Maize",  "Mango",  "Math",  "Mung",  "Onions",  "Peas",  "Potatos",  "Ragi",  "Rabbi_Jowar",  "Rala",  "Rice",  "Safflower_AR_UNDR_CROP",  "Sawan",  "Soyabean",  "Sugar cane",  "Sunflower",  "Tomatoes",  "Tur",  "Udid",  "Wari",  "Wheat"];
+
+
+  // Define the number of crop labels to create
+  var numCropLabels = 5;
+
+  // Create the crop labels and options dynamically
+  var cropSelectContainer = document.getElementById("crop-select-container");
+
+  for (var i = 1; i <= numCropLabels; i++) {
+  
+    var label = document.createElement("label");
+    label.setAttribute("for", "crop-select-" + i);
+    label.textContent = "Crops "+ ":";
+
+    var select = document.createElement("select");
+    select.setAttribute("name", "crop-" + i);
+    select.setAttribute("id", "crop-select-" + i);
+
+    var defaultOption = document.createElement("option");
+    defaultOption.setAttribute("value", "");
+    defaultOption.textContent = "Select Crop";
+    select.appendChild(defaultOption);
+
+    for (var j = 0; j < cropOptions.length; j++) {
+      var option = document.createElement("option");
+      option.setAttribute("value", cropOptions[j]);
+      option.textContent = cropOptions[j];
+      select.appendChild(option);
+    }
+
+    cropSelectContainer.appendChild(label);
+    cropSelectContainer.appendChild(select);
+  
+  }
+
+  // Remove the rest of the crop labels and options
+  for (var i = 2; i <= numCropLabels; i++) {
+  var labelToRemove = document.querySelector("label[for='crop-select-" + i + "']");
+  var selectToRemove = document.querySelector("#crop-select-" + i);
+  cropSelectContainer.removeChild(labelToRemove);
+  }  
+
+
+
+</script>
+
+
+<!-- Linked Javascript -->
+<script src = "/workerscript.js"></script>
+
+</body>
+
+</html>
